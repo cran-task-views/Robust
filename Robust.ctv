@@ -48,11 +48,11 @@
     as an R package now GPLicensed thanks to Insightful and Kjell Konis.
 
     Whereas there is currently quite a bit of overlap (between 'robustbase'
-     and 'robust'), the intent is that <pkg>robust</pkg> will eventually
-     <em>depend</em> on <pkg>robustbase</pkg>, the former providing
-     convenient routines for the casual user where the latter will contain
-     the underlying functionality, and provide the more advanced
-     statistician with a considerable choice of methodology.
+     and 'robust'), the intent (as of Nov.2007) is that <pkg>robust</pkg>
+     will eventually <em>depend</em> on <pkg>robustbase</pkg>, the former
+     providing convenient routines for the casual user where the latter
+     will contain the underlying functionality, and provide the more
+     advanced statistician with a considerable choice of methodology.
     </p>
 
     We structure the packages roughly into the following topics, and
@@ -69,8 +69,9 @@
 	among the predictors (where S-estimators (and hence MM-estimators)
 	based on resampling typically badly fail).
 
-<!-- 	<tt>ltsReg()</tt> -->
-<!-- 	<tt>lmrob.S()</tt> -->
+	The <tt>ltsReg()</tt> and <tt>lmrob.S()</tt> functions
+	are available in <pkg>robustbase</pkg>, but rather for comparison
+	purposes.
 
 	<tt>rlm()</tt> from <tt>MASS</tt> (inside the <pkg>VR</pkg>, see above).
 
@@ -79,8 +80,11 @@
 	special case, doing so also for nonparametric regression via
 	splines.
 
+	Package <pkg>mblm</pkg>'s function <tt>mblm()</tt> fits
+	median-based (Theil-Sen or Siegel's repeated) simple linear models.
+
 	Generalized linear models (GLMs) are provided both via
-	<tt>gmrob()</tt> (<pkg>robustbase</pkg>) and <tt>glmRob()</tt>
+	<tt>glmrob()</tt> (<pkg>robustbase</pkg>) and <tt>glmRob()</tt>
 	(<pkg>robust</pkg>).
 	<!--- where the former is typically preferable -->
 
@@ -121,14 +125,35 @@
       <li><i>Descriptive Statistics / Exploratory Data Analysis</i>: ... </li>
 
       <li><i>Time Series</i>:
-      As far as we know, functionality is badly missing here;
-      Peter Ruckdeschel has started to lead an effort for robust
-      time-series package.
+	<ul>
+	  <li>
+	    Package <pkg>robfilter</pkg> contains robust regression and
+	    filtering methods for univariate time series, typically based on
+	    repeated (weighted) median regressions.</li>
+
+	  <li>
+	    Peter Ruckdeschel has started to lead an effort for a robust
+	    time-series package, <pkg>robust-ts</pkg>, see the
+	    <a href="http://r-forge.r-project.org/projects/robust-ts/">robust-ts
+	      R-forge page</a>.</li>
+
+	  <li>
+	    Further, <pkg>robKalman</pkg>, <i>"Routines for Robust Kalman
+	      Filtering --- the ACM- and rLS-filter"</i>, is being developed, see the
+	    <a href="http://r-forge.r-project.org/projects/robkalman/">robKalman
+	      R-forge page</a>.</li>
+	</ul>
+	Note however that these (last two items) are not yet available from CRAN.
       </li>
 
       <li><i>Econometric Models</i>: ...
 
-       See also the CRAN task view <view>Econometrics</view>
+	Econometricians tend to like HAC (heteroscedasticity and
+        autocorrelation corrected) standard errors. These are provided for
+	<tt>lmrob()</tt> and also available in package <pkg>sandwich</pkg>
+	for traditional estimators.
+
+	See also the CRAN task view <view>Econometrics</view>
       </li>
 
       <li><i>Robust Methods for Bioinformatics</i>:
@@ -139,6 +164,26 @@
        </li>
 
       <li><i>Other approaches to robust and resistant methodology</i>:
+	<ul>
+	  <li>
+	    The package <pkg>distr</pkg> and its several child packages
+	    also allow to explore robust estimation concepts, see e.g., the
+	    <a href="http://r-forge.r-project.org/projects/distr/">R-forge
+	      "distr" page</a>.</li>
+
+	  <li>
+	    Notably, based on these,
+	    the project <tt>RobASt</tt> aims for the implementation of R
+	    packages for the computation of optimally robust estimators and
+	    tests as well as the necessary infrastructure (mainly S4 classes
+	    and methods) and diagnostics; cf. M. Kohl (2005). So far, it
+	    includes the R packages
+	    <pkg>RandVar</pkg>, <pkg>ROptEst</pkg>, <pkg>RobLox</pkg>,
+	    <pkg>ROptRegTS</pkg>, <pkg>RobRex</pkg>.
+	    <!-- <br> -->
+	    Note however that most of these are not yet available from
+	    CRAN.</li>
+	</ul>
       </li>
 
     </ul>
@@ -150,9 +195,14 @@
     <pkg priority="core">rrcov</pkg>
     <pkg>quantreg</pkg>
 
+    <pkg>distr</pkg>
+    <pkg>mblm</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>sandwich</pkg>
     <pkg>covRobust</pkg>
+    <pkg>RobLox</pkg>
+    <pkg>RobRex</pkg>
+    <pkg>robfilter</pkg>
     <pkg>wle</pkg>
 
     <pkg priority="core">VR</pkg>
