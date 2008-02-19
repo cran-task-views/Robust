@@ -1,9 +1,7 @@
-<!-- emacs, please treat me as -*- html -*- -->
-<!-- to test, do use ~/R/MM/Pkg-ex/robustness-ctv.R -->
 <CRANTaskView>
 
-  <name>Robustness</name>
-  <topic>Robust Statistical Methodology</topic>
+  <name>Robust</name>
+  <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
   <version>2008-02-19</version>
@@ -12,15 +10,15 @@
     <p>
     Robust (or "resistant") methods for statistics modelling have been
     available in S from the start, in R in package <pkg>stats</pkg>
-    (e.g., <tt>median</tt>, <tt>mean(*, trim = . )</tt>, <tt>mad()</tt>,
-    <tt>IQR()</tt>,
-    or also <tt>fivenum()</tt> (the statistic behind <tt>boxplot()</tt> in
-    <pkg>graphics</pkg>) or <tt>lowess()</tt>.
+    (e.g., <code>median()</code>, <code>mean(*, trim = . )</code>, <code>mad()</code>,
+    <code>IQR()</code>,
+    or also <code>fivenum()</code> (the statistic behind <code>boxplot()</code> in
+    package graphics) or <code>lowess()</code>.
     Much further important functionality has been made available in package
     MASS (inside the <pkg>VR</pkg> bundle by Bill Venables and Brian
     Ripley, see <em>the</em> book
     <a href="http://www.stats.ox.ac.uk/pub/MASS4/">Modern Applied Statistics with S</a>),
-    notably <tt>rlm()</tt> for robust regression and <tt>cov.rob()</tt> for
+    notably <code>rlm()</code> for robust regression and <code>cov.rob()</code> for
     robust multivariate scatter and covariance.
     </p>
     <p>
@@ -61,7 +59,7 @@
     <ul>
       <li><i>Regression (Linear, Generalized Linear, Nonlinear Models)</i>:
 
-	<tt>lmrob()</tt> (<pkg>robustbase</pkg>) and <tt>lmRob()</tt>
+	<code>lmrob()</code> (<pkg>robustbase</pkg>) and <code>lmRob()</code>
 	(<pkg>robust</pkg>) where the former uses the latest of the
 	fast-S algorithms and heteroscedasticity and autocorrelation corrected
 	(HAC) standard errors, the latter makes use of the M-S algorithm of
@@ -69,41 +67,41 @@
 	among the predictors (where S-estimators (and hence MM-estimators)
 	based on resampling typically badly fail).
 
-	The <tt>ltsReg()</tt> and <tt>lmrob.S()</tt> functions
+	The <code>ltsReg()</code> and <code>lmrob.S()</code> functions
 	are available in <pkg>robustbase</pkg>, but rather for comparison
 	purposes.
 
-	<tt>rlm()</tt> from <tt>MASS</tt> (inside the <pkg>VR</pkg>, see above).
+	<code>rlm()</code> from MASS (inside the <pkg>VR</pkg>, see above).
 
 	Note that Koenker's quantile regression package <pkg>quantreg</pkg>
 	contains L1 (aka LAD, least absolute deviations)-regression as a
 	special case, doing so also for nonparametric regression via
 	splines.
 
-	Package <pkg>mblm</pkg>'s function <tt>mblm()</tt> fits
+	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
 	median-based (Theil-Sen or Siegel's repeated) simple linear models.
 
 	Generalized linear models (GLMs) are provided both via
-	<tt>glmrob()</tt> (<pkg>robustbase</pkg>) and <tt>glmRob()</tt>
+	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
 	(<pkg>robust</pkg>).
 	<!--- where the former is typically preferable -->
 
 	Robust Nonlinear model fitting is available through
-	<pkg>robustbase</pkg>'s <tt>nlrob()</tt>.
+	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
       </li>
 
       <li><i>Multivariate Analysis</i>:
 
-      Here, the <pkg>rrcov</pkg> package which builds ("<tt>Depends</tt>")
+      Here, the <pkg>rrcov</pkg> package which builds ("<code>Depends</code>")
       on <pkg>robustbase</pkg> provides nice S4 class based methods,
       that are planned to be moved into <pkg>robustbase</pkg>, and additionally
-      robust PCA methodology. .... <!--- FIXME; there's more . -->
+      robust PCA methodology. <!--- .... FIXME; there's more . -->
 
       Here, <pkg>robustbase</pkg> contains a slightly more flexible
-      version, <tt>covMcd()</tt> than <pkg>robust</pkg>'s
-      <tt>fastmcd()</tt>, and similarly for <tt>covOGK()</tt>.
-      OTOH, <pkg>robust</pkg>'s <tt>covRob()</tt> has automatically chosen
-      methods, notably <tt>pairwiseQC()</tt> for large dimensionality p.
+      version, <code>covMcd()</code> than <pkg>robust</pkg>'s
+      <code>fastmcd()</code>, and similarly for <code>covOGK()</code>.
+      OTOH, <pkg>robust</pkg>'s <code>covRob()</code> has automatically chosen
+      methods, notably <code>pairwiseQC()</code> for large dimensionality p.
 
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       sign methods for outlier identification in high dimensions.
@@ -133,15 +131,12 @@
 
 	  <li>
 	    Peter Ruckdeschel has started to lead an effort for a robust
-	    time-series package, <pkg>robust-ts</pkg>, see the
-	    <a href="http://r-forge.r-project.org/projects/robust-ts/">robust-ts
-	      R-forge page</a>.</li>
+	    time-series package, see <forge>robust-ts</forge> on R-Forge.</li>
 
 	  <li>
 	    Further, <pkg>robKalman</pkg>, <i>"Routines for Robust Kalman
-	      Filtering --- the ACM- and rLS-filter"</i>, is being developed, see the
-	    <a href="http://r-forge.r-project.org/projects/robkalman/">robKalman
-	      R-forge page</a>.</li>
+	    Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
+	    <forge>robkalman</forge> on R-Forge.</li>
 	</ul>
 	Note however that these (last two items) are not yet available from CRAN.
       </li>
@@ -150,7 +145,7 @@
 
 	Econometricians tend to like HAC (heteroscedasticity and
         autocorrelation corrected) standard errors. These are provided for
-	<tt>lmrob()</tt> and also available in package <pkg>sandwich</pkg>
+	<code>lmrob()</code> and also available in package <pkg>sandwich</pkg>
 	for traditional estimators.
 
 	See also the CRAN task view <view>Econometrics</view>
@@ -167,21 +162,18 @@
 	<ul>
 	  <li>
 	    The package <pkg>distr</pkg> and its several child packages
-	    also allow to explore robust estimation concepts, see e.g., the
-	    <a href="http://r-forge.r-project.org/projects/distr/">R-forge
-	      "distr" page</a>.</li>
+	    also allow to explore robust estimation concepts, see e.g.,
+	    <forge>distr</forge> on R-Forge.</li>
 
 	  <li>
 	    Notably, based on these,
-	    the project <tt>RobASt</tt> aims for the implementation of R
+	    the project <forge>robast</forge> aims for the implementation of R
 	    packages for the computation of optimally robust estimators and
 	    tests as well as the necessary infrastructure (mainly S4 classes
 	    and methods) and diagnostics; cf. M. Kohl (2005). So far, it
 	    includes the R packages
 	    <pkg>RandVar</pkg>, <pkg>ROptEst</pkg>, <pkg>RobLox</pkg>,
 	    <pkg>ROptRegTS</pkg>, <pkg>RobRex</pkg>.
-	    <!-- <br> -->
-	    Note however that most of these are not yet available from
 	    CRAN.</li>
 	</ul>
       </li>
@@ -190,22 +182,23 @@
   </info>
 
   <packagelist>
-    <pkg priority="core">robustbase</pkg>
-    <pkg priority="core">robust</pkg>
-    <pkg priority="core">rrcov</pkg>
-    <pkg>quantreg</pkg>
-
+    <pkg>covRobust</pkg>
     <pkg>distr</pkg>
     <pkg>mblm</pkg>
     <pkg>mvoutlier</pkg>
-    <pkg>sandwich</pkg>
-    <pkg>covRobust</pkg>
+    <pkg>quantreg</pkg>
+    <pkg>robfilter</pkg>
+    <pkg>RandVar</pkg>
     <pkg>RobLox</pkg>
     <pkg>RobRex</pkg>
-    <pkg>robfilter</pkg>
-    <pkg>wle</pkg>
-
+    <pkg>ROptEst</pkg>
+    <pkg>ROptRegTS</pkg>
+    <pkg priority="core">robust</pkg>
+    <pkg priority="core">robustbase</pkg>
+    <pkg priority="core">rrcov</pkg>
+    <pkg>sandwich</pkg>
     <pkg priority="core">VR</pkg>
+    <pkg>wle</pkg>
   </packagelist>
 
   <links>
