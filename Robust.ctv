@@ -1,4 +1,5 @@
-<CRANTaskView>
+<CRANTaskView> <!-- emacs, please treat me as -*- html -*- -->
+  <!-- to test, do use ~/R/MM/Pkg-ex/robustness-ctv.R -->
 
   <name>Robust</name>
   <topic>Robust Statistical Methods</topic>
@@ -141,12 +142,14 @@
 	Note however that these (last two items) are not yet available from CRAN.
       </li>
 
-      <li><i>Econometric Models</i>: ...
+      <li><i>Econometric Models</i>:
 
 	Econometricians tend to like HAC (heteroscedasticity and
-        autocorrelation corrected) standard errors. These are provided for
-	<code>lmrob()</code> and also available in package <pkg>sandwich</pkg>
-	for traditional estimators.
+        autocorrelation corrected) standard errors. For a broad class of
+        models, these are provided by package <pkg>sandwich</pkg>.
+
+	Note that <code>vcov(lmrob())</code> also uses a version of HAC
+	standard errors for its robustly estimated linear models.
 
 	See also the CRAN task view <view>Econometrics</view>
       </li>
