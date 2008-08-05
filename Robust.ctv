@@ -10,7 +10,8 @@
   <info>
     <p>
     Robust (or "resistant") methods for statistics modelling have been
-    available in S from the start, in R in package <pkg>stats</pkg>
+    available in S from the start, in R in package <code>stats</code>
+    <!-- not using <pkg... /pkg  for a standard i.e. non-CRAN package --->
     (e.g., <code>median()</code>, <code>mean(*, trim = . )</code>, <code>mad()</code>,
     <code>IQR()</code>,
     or also <code>fivenum()</code> (the statistic behind <code>boxplot()</code> in
@@ -177,7 +178,7 @@
 	    includes the R packages
 	    <pkg>RandVar</pkg>, <pkg>ROptEst</pkg>, <pkg>RobLox</pkg>,
 	    <pkg>ROptRegTS</pkg>, <pkg>RobRex</pkg>.
-	    CRAN.</li>
+	   </li>
 	</ul>
       </li>
 
