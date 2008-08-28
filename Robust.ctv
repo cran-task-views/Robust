@@ -11,7 +11,7 @@
     <p>
     Robust (or "resistant") methods for statistics modelling have been
     available in S from the start, in R in package <code>stats</code>
-    <!-- not using <pkg... /pkg  for a standard i.e. non-CRAN package --->
+    <!-- not using <pkg... /pkg  for a standard i.e. non-CRAN package -->
     (e.g., <code>median()</code>, <code>mean(*, trim = . )</code>, <code>mad()</code>,
     <code>IQR()</code>,
     or also <code>fivenum()</code> (the statistic behind <code>boxplot()</code> in
@@ -86,7 +86,7 @@
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
 	(<pkg>robust</pkg>).
-	<!--- where the former is typically preferable -->
+	<!-- where the former is typically preferable -->
 
 	Robust Nonlinear model fitting is available through
 	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
@@ -97,7 +97,7 @@
       Here, the <pkg>rrcov</pkg> package which builds ("<code>Depends</code>")
       on <pkg>robustbase</pkg> provides nice S4 class based methods,
       that are planned to be moved into <pkg>robustbase</pkg>, and additionally
-      robust PCA methodology. <!--- .... FIXME; there's more . -->
+      robust PCA methodology. <!-- .... FIXME; there's more . -->
 
       Here, <pkg>robustbase</pkg> contains a slightly more flexible
       version, <code>covMcd()</code> than <pkg>robust</pkg>'s
