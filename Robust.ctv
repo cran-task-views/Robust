@@ -124,7 +124,7 @@
 
       <li><i>Descriptive Statistics / Exploratory Data Analysis</i>: ... </li>
 
-      <li><i>Time Series</i>:
+      <li><i>Time Series</i>:</li>
 	<ul>
 	  <li>
 	    Package <pkg>robfilter</pkg> contains robust regression and
@@ -140,8 +140,7 @@
 	    Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
 	    <rforge>robkalman</rforge> on R-Forge.</li>
 	</ul>
-	Note however that these (last two items) are not yet available from CRAN.
-      </li>
+	Note however that these (last two items) are not yet available from CRAN.      
 
       <li><i>Econometric Models</i>:
 
