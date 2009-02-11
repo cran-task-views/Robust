@@ -23,10 +23,12 @@
     notably <code>rlm()</code> for robust regression and <code>cov.rob()</code> for
     robust multivariate scatter and covariance.
     </p>
+
     <p>
     This task view is about R add-on packages providing newer or faster,
     more efficient algorithms and models.
     </p>
+
     <p>
     Please send suggestions for additions and extensions to the
     <a href="mailto:maechler@R-project.org">task view maintainer</a>.
@@ -55,9 +57,9 @@
      advanced statistician with a considerable choice of methodology.
     </p>
 
-    We structure the packages roughly into the following topics, and
+    <p>We structure the packages roughly into the following topics, and
     typically will first mention functionality in packages
-    <pkg>robustbase</pkg> and <pkg>robust</pkg>.
+    <pkg>robustbase</pkg> and <pkg>robust</pkg>.</p>
     <ul>
       <li><i>Regression (Linear, Generalized Linear, Nonlinear Models)</i>:
 
@@ -117,14 +119,14 @@
           <view>Cluster</view>
       </li>
 
-      <li><i>Large Data Sets</i>: ...       </li>
+      <li><i>Large Data Sets</i>: ... 
 
-      See also the CRAN task view
-          <view>MachineLearning</view>
+      (See also the CRAN task view
+          <view>MachineLearning</view>.)</li>
 
       <li><i>Descriptive Statistics / Exploratory Data Analysis</i>: ... </li>
 
-      <li><i>Time Series</i>:</li>
+      <li><i>Time Series</i>:
 	<ul>
 	  <li>
 	    Package <pkg>robfilter</pkg> contains robust regression and
@@ -141,7 +143,7 @@
 	    <rforge>robkalman</rforge> on R-Forge.</li>
 	</ul>
 	Note however that these (last two items) are not yet available from CRAN.      
-
+        </li>
       <li><i>Econometric Models</i>:
 
 	Econometricians tend to like HAC (heteroscedasticity and
@@ -167,7 +169,6 @@
 	    The package <pkg>distr</pkg> and its several child packages
 	    also allow to explore robust estimation concepts, see e.g.,
 	    <rforge>distr</rforge> on R-Forge.</li>
-
 	  <li>
 	    Notably, based on these,
 	    the project <rforge>robast</rforge> aims for the implementation of R
