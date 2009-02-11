@@ -133,12 +133,12 @@
 
 	  <li>
 	    Peter Ruckdeschel has started to lead an effort for a robust
-	    time-series package, see <forge>robust-ts</forge> on R-Forge.</li>
+	    time-series package, see <rforge>robust-ts</rforge> on R-Forge.</li>
 
 	  <li>
 	    Further, <pkg>robKalman</pkg>, <i>"Routines for Robust Kalman
 	    Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
-	    <forge>robkalman</forge> on R-Forge.</li>
+	    <rforge>robkalman</rforge> on R-Forge.</li>
 	</ul>
 	Note however that these (last two items) are not yet available from CRAN.
       </li>
@@ -167,11 +167,11 @@
 	  <li>
 	    The package <pkg>distr</pkg> and its several child packages
 	    also allow to explore robust estimation concepts, see e.g.,
-	    <forge>distr</forge> on R-Forge.</li>
+	    <rforge>distr</rforge> on R-Forge.</li>
 
 	  <li>
 	    Notably, based on these,
-	    the project <forge>robast</forge> aims for the implementation of R
+	    the project <rforge>robast</rforge> aims for the implementation of R
 	    packages for the computation of optimally robust estimators and
 	    tests as well as the necessary infrastructure (mainly S4 classes
 	    and methods) and diagnostics; cf. M. Kohl (2005). So far, it
@@ -207,8 +207,11 @@
 
   <links>
     <a href="http://www.statistik.tuwien.ac.at/rsr/">Robust Statistics in R (TU Vienna)</a>
-    <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-robust/">R Special
-    Interest Group on Robust Statistics</a>
+    <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-robust/">R Special Interest Group on Robust Statistics</a>
+    <rforge>distr</rforge>
+    <rforge>robast</rforge>
+    <rforge>robkalman</rforge>
+    <rforge>robust-ts</rforge>
   </links>
 
 </CRANTaskView>
