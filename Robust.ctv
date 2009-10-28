@@ -17,7 +17,7 @@
     or also <code>fivenum()</code> (the statistic behind <code>boxplot()</code> in
     package graphics) or <code>lowess()</code>.
     Much further important functionality has been made available in package
-    MASS (inside the <pkg>VR</pkg> bundle by Bill Venables and Brian
+    <pkg>MASS</pkg> (by Bill Venables and Brian
     Ripley, see <em>the</em> book
     <a href="http://www.stats.ox.ac.uk/pub/MASS4/">Modern Applied Statistics with S</a>),
     notably <code>rlm()</code> for robust regression and <code>cov.rob()</code> for
@@ -75,7 +75,7 @@
 	are available in <pkg>robustbase</pkg>, but rather for comparison
 	purposes.
 
-	<code>rlm()</code> from MASS (inside the <pkg>VR</pkg>, see above).
+	<code>rlm()</code> from <pkg>MASS</pkg>.
 
 	Note that Koenker's quantile regression package <pkg>quantreg</pkg>
 	contains L1 (aka LAD, least absolute deviations)-regression as a
@@ -188,6 +188,7 @@
   <packagelist>
     <pkg>covRobust</pkg>
     <pkg>distr</pkg>
+    <pkg priority="core">MASS</pkg>
     <pkg>mblm</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>quantreg</pkg>
@@ -201,7 +202,6 @@
     <pkg priority="core">robustbase</pkg>
     <pkg priority="core">rrcov</pkg>
     <pkg>sandwich</pkg>
-    <pkg priority="core">VR</pkg>
     <pkg>wle</pkg>
   </packagelist>
 
