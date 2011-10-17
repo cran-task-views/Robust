@@ -5,7 +5,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2008-09-03</version>
+  <version>2011-10-17</version>
 
   <info>
     <p>
@@ -92,6 +92,12 @@
 
 	Robust Nonlinear model fitting is available through
 	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
+
+	<pkg>multinomRob</pkg> fits overdispersed multinomial regression
+	models for count data.
+
+	<pkg>rgam</pkg> fits robust GAMs, i.e., robust Generalized Additive
+	Models.
       </li>
 
       <li><i>Multivariate Analysis</i>:
@@ -110,16 +116,24 @@
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       sign methods for outlier identification in high dimensions.
 
+      <pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
+      and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
+      multivarate regression, PCA and Hotelling tests.
+
       <pkg>covRobust</pkg> provides the
       nearest neighbor variance estimation (NNVE) method of Wang and
       Raftery (2002).
+
+<!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
+<!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
+<!-- did *not* escape '%' !! -->
 
       See also the CRAN task views
           <view>Multivariate</view> and
           <view>Cluster</view>
       </li>
 
-      <li><i>Large Data Sets</i>: ... 
+      <li><i>Large Data Sets</i>: ...
 
       (See also the CRAN task view
           <view>MachineLearning</view>.)</li>
@@ -142,7 +156,7 @@
 	    Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
 	    <rforge>robkalman</rforge> on R-Forge.</li>
 	</ul>
-	Note however that these (last two items) are not yet available from CRAN.      
+	Note however that these (last two items) are not yet available from CRAN.
         </li>
       <li><i>Econometric Models</i>:
 
@@ -174,11 +188,14 @@
 	    the project <rforge>robast</rforge> aims for the implementation of R
 	    packages for the computation of optimally robust estimators and
 	    tests as well as the necessary infrastructure (mainly S4 classes
-	    and methods) and diagnostics; cf. M. Kohl (2005). So far, it
-	    includes the R packages
-	    <pkg>RandVar</pkg>, <pkg>ROptEst</pkg>, <pkg>RobLox</pkg>,
-	    <pkg>ROptRegTS</pkg>, <pkg>RobRex</pkg>.
-	   </li>
+	    and methods) and diagnostics; cf. M. Kohl (2005).
+	    It includes the R packages
+	    <pkg>RandVar</pkg>, <pkg>RobAStBase</pkg>, <pkg>RobLox</pkg>,
+	    <pkg>RobLoxBioC</pkg>, <pkg>RobRex</pkg>.
+	    Further, <pkg>ROptEst</pkg>, and <pkg>ROptRegTS</pkg>.
+	  </li>
+	  <li> <pkg>RobustAFT</pkg> computes Robust Accelerated Failure
+	  Time Regression for Gaussian and logWeibull errors.</li>
 	</ul>
       </li>
 
@@ -188,16 +205,21 @@
   <packagelist>
     <pkg>covRobust</pkg>
     <pkg>distr</pkg>
+    <pkg>FRB</pkg>
     <pkg priority="core">MASS</pkg>
     <pkg>mblm</pkg>
+    <pkg>multinomRob</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>quantreg</pkg>
+    <pkg>rgam</pkg>
     <pkg>robfilter</pkg>
-    <pkg>RandVar</pkg>
-    <pkg>RobLox</pkg>
-    <pkg>RobRex</pkg>
     <pkg>ROptEst</pkg>
     <pkg>ROptRegTS</pkg>
+    <pkg>RandVar</pkg>
+    <pkg>RobAstBase</pkg>
+    <pkg>RobLox</pkg>
+    <pkg>RobRex</pkg>
+    <pkg>RobustAFT</pkg>
     <pkg priority="core">robust</pkg>
     <pkg priority="core">robustbase</pkg>
     <pkg priority="core">rrcov</pkg>
