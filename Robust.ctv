@@ -216,7 +216,7 @@
     <pkg>ROptEst</pkg>
     <pkg>ROptRegTS</pkg>
     <pkg>RandVar</pkg>
-    <pkg>RobAstBase</pkg>
+    <pkg>RobAStBase</pkg>
     <pkg>RobLox</pkg>
     <pkg>RobRex</pkg>
     <pkg>RobustAFT</pkg>
