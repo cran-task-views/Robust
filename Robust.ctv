@@ -15,7 +15,9 @@
     (e.g., <code>median()</code>, <code>mean(*, trim = . )</code>, <code>mad()</code>,
     <code>IQR()</code>,
     or also <code>fivenum()</code> (the statistic behind <code>boxplot()</code> in
-    package graphics) or <code>lowess()</code>.
+    package graphics) or <code>lowess()</code>, which had been complemented
+    by <code>runmed()</code> in 2003.
+
     Much further important functionality has been made available in package
     <pkg>MASS</pkg> (by Bill Venables and Brian
     Ripley, see <em>the</em> book
@@ -26,7 +28,7 @@
 
     <p>
     This task view is about R add-on packages providing newer or faster,
-    more efficient algorithms and models.
+    more efficient algorithms and notably for (robustification of) new models.
     </p>
 
     <p>
