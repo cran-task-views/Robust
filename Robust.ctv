@@ -42,7 +42,7 @@
     the scattered developments and make the important ones available
     through a set of R packages complementing each other.
 
-    which should build on a basic package with "Essentials",
+    These should build on a basic package with "Essentials",
     coined <pkg>robustbase</pkg> with (potentially many) other packages
     building on top and extending the essential functionality to particular
     models and or applications.
@@ -129,6 +129,11 @@
 <!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
 <!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
 <!-- did *not* escape '%' !! -->
+
+      Note that robust PCA can be performed by using standard
+      \R's <code>princomp()</code>, e.g.,
+      <code> X <- stackloss; pc.rob <- princomp(X, covmat= MASS::cov.rob(X))</code>
+
 
       See also the CRAN task views
           <view>Multivariate</view> and
