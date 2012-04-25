@@ -132,7 +132,7 @@
 
       Note that robust PCA can be performed by using standard
       \R's <code>princomp()</code>, e.g.,
-      <code> X <- stackloss; pc.rob <- princomp(X, covmat= MASS::cov.rob(X))</code>
+      <code> X &lt;- stackloss; pc.rob &lt;- princomp(X, covmat= MASS::cov.rob(X))</code>
 
 
       See also the CRAN task views
