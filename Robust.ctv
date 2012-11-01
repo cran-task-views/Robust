@@ -84,9 +84,6 @@
 	special case, doing so also for nonparametric regression via
 	splines.
 
-	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
-	median-based (Theil-Sen or Siegel's repeated) simple linear models.
-
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
 	(<pkg>robust</pkg>).
@@ -210,7 +207,6 @@
     <pkg>distr</pkg>
     <pkg>FRB</pkg>
     <pkg priority="core">MASS</pkg>
-    <pkg>mblm</pkg>
     <pkg>multinomRob</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>quantreg</pkg>
