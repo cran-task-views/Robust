@@ -84,6 +84,15 @@
 	special case, doing so also for nonparametric regression via
 	splines.
 
+	Quantile regression (and hence L1 or LAD) for mixed effect models,
+	is available in package <pkg>lqmm</pkg>, whereas an
+	<em>MM-like</em> approach for robust linear mixed effects modeling
+	is available from package <pkg>robustlmm</pkg>.
+
+	<!-- Never updated since 2007-07-23, archived on CRAN,  2012-10-29
+	  - Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
+	  - median-based (Theil-Sen or Siegel's repeated) simple linear models. -->
+
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
 	(<pkg>robust</pkg>).
@@ -112,6 +121,12 @@
       OTOH, <pkg>robust</pkg>'s <code>covRob()</code> has automatically chosen
       methods, notably <code>pairwiseQC()</code> for large dimensionality p.
 
+      Package <pkg>robustX</pkg> for experimental, or other not yet
+      established procedures, contains <code>BACON()</code> and
+      <code>covNCC()</code>, the latter providing the
+      neighbor variance estimation (NNVE) method of Wang and Raftery(2002),
+      which used to be in a package <code>covRobust</code> no longer on CRAN.
+
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       sign methods for outlier identification in high dimensions.
 
@@ -119,6 +134,10 @@
       and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
       multivarate regression, PCA and Hotelling tests.
 
+      <!-- Never updated since 2003-11-14, archived on CRAN,  2012-10-29
+        - <pkg>covRobust</pkg> provides the
+        - nearest neighbor variance estimation (NNVE) method of Wang and
+        - Raftery (2002). -->
 
 <!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
 <!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
@@ -208,10 +227,10 @@
     <pkg>FRB</pkg>
     <pkg priority="core">MASS</pkg>
     <pkg>multinomRob</pkg>
+    <pkg>lqmm</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>quantreg</pkg>
     <pkg>rgam</pkg>
-    <pkg>robfilter</pkg>
     <pkg>ROptEst</pkg>
     <pkg>ROptRegTS</pkg>
     <pkg>RandVar</pkg>
@@ -220,6 +239,9 @@
     <pkg>RobLoxBioC</pkg>
     <pkg>RobRex</pkg>
     <pkg>RobustAFT</pkg>
+    <pkg>robfilter</pkg>
+    <pkg>robustlmm</pkg>
+    <pkg>robustX</pkg>
     <pkg priority="core">robust</pkg>
     <pkg priority="core">robustbase</pkg>
     <pkg priority="core">rrcov</pkg>
