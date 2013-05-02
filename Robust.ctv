@@ -1,5 +1,7 @@
 <CRANTaskView> <!-- emacs, please treat me as -*- html -*- -->
-  <!-- to test, do use ~/R/MM/Pkg-ex/robustness-ctv.R -->
+  <!-- to test *AND* find CRAN packages,
+  do use ~/R/MM/Pkg-ex/robustness-ctv.R
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
   <name>Robust</name>
   <topic>Robust Statistical Methods</topic>
@@ -119,6 +121,10 @@
       on <pkg>robustbase</pkg> provides nice S4 class based methods,
       more methods for robust multivariate variance-covariance estimation,
       and adds robust PCA methodology. <!-- .... FIXME; there's more . -->
+      It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
+      methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
+      <pkg>rrcovHD</pkg>, providing robust multivariate methods for
+      <em>High Dimensional</em> data.
 
       Here, <pkg>robustbase</pkg> contains a slightly more flexible
       version, <code>covMcd()</code> than <pkg>robust</pkg>'s
@@ -196,15 +202,21 @@
       </li>
 
       <li><i>Robust Methods for Bioinformatics</i>:
-
       There are several packages in the <a
       href="http://www.bioconductor.org/">Bioconductor project</a>
       providing specialized robust methods.
+
+      In addition, <pkg>RobLoxBioC</pkg> provides infinitesimally robust
+      estimators for preprocessing omics data.
        </li>
+
+      <li><i>Robust Methods for Survival Analysis</i>:
+	Package <pkg>coxrobust</pkg> provides robust estimation in the Cox model.
+      </li>
 
       <li><i>Robust Methods for Surveys</i>:
 	On R-forge only, package <rforge>rhte</rforge> provides a robust
-	robust Horvitz-Thompson estimator.
+	Horvitz-Thompson estimator.
       </li>
 
       <!--  NOT YET : FIXME when available - - - - - -->
@@ -234,7 +246,7 @@
 	  Time Regression for Gaussian and logWeibull errors.
 	  </li>
 	  <li> <pkg>wle</pkg> <i>Weighted Likelihood Estimation</i> provides
-	    robustified likelihood estimation for a wide range of models,
+	    robustified likelihood estimation for a range of models,
 	    notably (generalized) regression, and time series (AR and
 	    fracdiff).
 	  </li>
@@ -244,10 +256,16 @@
     </ul>
   </info>
 
+  <!-- >> sorted alphabetically in HTML irrespective of order here! -->
   <packagelist>
+    <pkg priority="core">MASS</pkg>
+    <pkg priority="core">robustbase</pkg>
+    <pkg priority="core">robust</pkg>
+    <pkg priority="core">rrcov</pkg>
+
+    <pkg>coxrobust</pkg>
     <pkg>distr</pkg>
     <pkg>FRB</pkg>
-    <pkg priority="core">MASS</pkg>
     <pkg>multinomRob</pkg>
     <pkg>lqmm</pkg>
     <pkg>mvoutlier</pkg>
@@ -264,9 +282,8 @@
     <pkg>robfilter</pkg>
     <pkg>robustlmm</pkg>
     <pkg>robustX</pkg>
-    <pkg priority="core">robust</pkg>
-    <pkg priority="core">robustbase</pkg>
-    <pkg priority="core">rrcov</pkg>
+    <pkg>rrcovHD</pkg>
+    <pkg>rrcovNA</pkg>
     <pkg>sandwich</pkg>
     <pkg>wle</pkg>
   </packagelist>
