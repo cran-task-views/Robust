@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2013-05-02</version>
+  <version>2013-05-26</version>
 
   <info>
     <p>
@@ -135,8 +135,8 @@
       Package <pkg>robustX</pkg> for experimental, or other not yet
       established procedures, contains <code>BACON()</code> and
       <code>covNCC()</code>, the latter providing the
-      neighbor variance estimation (NNVE) method of Wang and Raftery(2002),
-      which used to be in a package <code>covRobust</code> no longer on CRAN.
+      neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
+      also available in <pkg>covRobust</pkg>.
 
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       several methods for outlier identification in high dimensions.
@@ -145,10 +145,9 @@
       and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
       multivarate regression, PCA and Hotelling tests.
 
-      <!-- Never updated since 2003-11-14, archived on CRAN,  2012-10-29
-        - <pkg>covRobust</pkg> provides the
-        - nearest neighbor variance estimation (NNVE) method of Wang and
-        - Raftery (2002). -->
+      <pkg>covRobust</pkg> provides the
+      nearest neighbor variance estimation (NNVE) method of Wang and
+      Raftery (2002).
 
 <!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
 <!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
@@ -263,6 +262,7 @@
     <pkg priority="core">robust</pkg>
     <pkg priority="core">rrcov</pkg>
 
+    <pkg>covRobust</pkg>
     <pkg>coxrobust</pkg>
     <pkg>distr</pkg>
     <pkg>FRB</pkg>
