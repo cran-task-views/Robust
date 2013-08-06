@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2013-05-26</version>
+  <version>2013-08-06</version>
 
   <info>
     <p>
@@ -141,7 +141,8 @@
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       several methods for outlier identification in high dimensions.
 
-      <pkg>RSKC</pkg> provides robust sparse K-means clustering.
+      <pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
+      <b>K</b>-means <b>C</b>lustering.
 
       <pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
       and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
