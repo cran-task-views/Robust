@@ -141,6 +141,8 @@
       <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
       several methods for outlier identification in high dimensions.
 
+      <pkg>RSKC</pkg> provides robust sparse K-means clustering.
+
       <pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
       and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
       multivarate regression, PCA and Hotelling tests.
@@ -284,6 +286,7 @@
     <pkg>robustX</pkg>
     <pkg>rrcovHD</pkg>
     <pkg>rrcovNA</pkg>
+    <pkg>RSKC</pkg>
     <pkg>sandwich</pkg>
     <pkg>wle</pkg>
   </packagelist>
