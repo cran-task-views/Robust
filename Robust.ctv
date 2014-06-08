@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2014-03-31</version>
+  <version>2014-06-08</version>
 
   <info>
     <p>
@@ -97,9 +97,8 @@
 	<em>MM-like</em> approach for robust linear <b>mixed effects</b> modeling
 	is available from package <pkg>robustlmm</pkg>.
 
-	<!-- Never updated since 2007-07-23, archived on CRAN,  2012-10-29
-	  - Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
-	  - median-based (Theil-Sen or Siegel's repeated) simple linear models. -->
+	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
+	median-based (Theil-Sen or Siegel's repeated) simple linear models.
 
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
@@ -309,6 +308,7 @@
     <pkg>GSE</pkg>
     <pkg>multinomRob</pkg>
     <pkg>lqmm</pkg>
+    <pkg>mblm</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
