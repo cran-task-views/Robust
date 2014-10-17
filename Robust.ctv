@@ -1,13 +1,13 @@
 <CRANTaskView> <!-- emacs, please treat me as -*- html -*- -->
   <!-- to test *AND* find CRAN packages,
-  do use ~/R/MM/Pkg-ex/robustness-ctv.R
+  do use ~/R/MM/Pkg-ex/robustness-ctv.R  <<=== TODO there !!
          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
   <name>Robust</name>
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2014-06-08</version>
+  <version>2014-10-17</version>
 
   <info>
     <p>
@@ -85,7 +85,11 @@
 	are available in <pkg>robustbase</pkg>, but rather for comparison
 	purposes.
 
-	<code>rlm()</code> from <pkg>MASS</pkg>.
+	<code>rlm()</code> from <pkg>MASS</pkg> had been the first widely
+	available implementation for robust linear models, and also one of
+	the very first MM-estimation implementations.
+	<pkg>robustreg</pkg> provides very simple M-estimates for linear
+	regression (in pure R).
 
 	Note that Koenker's quantile regression package <pkg>quantreg</pkg>
 	contains L1 (aka LAD, least absolute deviations)-regression as a
@@ -99,11 +103,17 @@
 
 	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
 	median-based (Theil-Sen or Siegel's repeated) simple linear models.
+	Package <pkg>TEEReg</pkg> provides trimmed elemental estimators for
+	linear models.<!-- not convincing to MM -->
 
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
-	(<pkg>robust</pkg>).
-	<!-- where the former is typically preferable -->
+	(<pkg>robust</pkg>), <!-- where the former is typically preferable -->
+	where package <pkg>robustloggamma</pkg> focuses on generalized log
+	gamma models.
+
+	Robust ordinal regression is provided by packages
+	<pkg>ror</pkg> (MCDA) and <pkg>rorutadis</pkg> (UTADIS).
 
 	Robust Nonlinear model fitting is available through
 	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
@@ -111,8 +121,8 @@
 	<pkg>multinomRob</pkg> fits overdispersed multinomial regression
 	models for count data.
 
-	<pkg>rgam</pkg> fits robust GAMs, i.e., robust Generalized Additive
-	Models.
+	<pkg>rgam</pkg> and <pkg>robustgam</pkg> both fit robust GAMs,
+	i.e., robust Generalized Additive Models.
 
 	<pkg>drgee</pkg> fits "Doubly Robust" Generalized Estimating Equations (GEEs)
 
@@ -139,7 +149,7 @@
       established procedures, contains <code>BACON()</code> and
       <code>covNCC()</code>, the latter providing the
       neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
-      also available in <pkg>covRobust</pkg>.
+      also available (slightly less optimized) in <pkg>covRobust</pkg>.
 
       <pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
 
@@ -150,13 +160,15 @@
 
       <pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
       and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
-      multivarate regression, PCA and Hotelling tests.
+      multivariate regression, PCA and Hotelling tests.
 
       <pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
       <b>K</b>-means <b>C</b>lustering.
+      <pkg>robustDA</pkg> for <em>robust mixture Discriminant Analysis</em>
+      (RMDA) builds a mixture model classifier with noisy class labels.
 
       <pkg>robcor</pkg> computes robust pairwise correlations based on scale estimates,
-      particularly on <tt>FastQn()</tt>.
+      particularly on <code>FastQn()</code>.
 
       <pkg>covRobust</pkg> provides the
       nearest neighbor variance estimation (NNVE) method of Wang and
@@ -184,7 +196,7 @@
 
 	(See also the CRAN task view <view>MachineLearning</view>.)</li>
 
-      <li><i>Descriptive Statistics / Exploratory Data Analysis</i>: 
+      <li><i>Descriptive Statistics / Exploratory Data Analysis</i>:
 	<code>boxplot.stats()</code>, etc mentioned above </li>
 
       <li><i>Time Series</i>:
@@ -238,7 +250,7 @@
 	model; package <pkg>rsig</pkg> does robust signature selection for
 	survival outcomes.
 	<pkg>OutlierDC</pkg> detects outliers using quantile regression for
-	censored data. 
+	censored data.
       </li>
 
       <li><i>Robust Methods in Biostatistics (outside of Survival A.)</i>:
@@ -254,6 +266,17 @@
       <li><i>Geostatistics</i>:
       	Package <rforge>georob</rforge> aims at robust geostatistical
       	analysis of spatial data, such as kriging and more.
+      </li>
+
+      <li><i>Collections of several methodologies</i>:
+	<ul>
+	  <li> <pkg>WRS2</pkg> contains (currently only a very small part) of the
+	    function of Rand Wilcox.</li>
+
+	  <li> <pkg>robeth</pkg> contains R functions interfacing to the extensive
+	    RobETH fortran library with many functions for regression,
+	    multivariate estimation and more.</li>
+	</ul>
       </li>
 
       <li><i>Other approaches to robust and resistant methodology</i>:
@@ -288,11 +311,11 @@
 	  </li>
 	</ul>
       </li>
-
     </ul>
   </info>
 
-  <!-- >> sorted alphabetically in HTML irrespective of order here! -->
+  <!-- >> sorted alphabetically in HTML irrespective of order here!
+       ==> add newest at BOTTOM ! -->
   <packagelist>
     <pkg priority="core">MASS</pkg>
     <pkg priority="core">robustbase</pkg>
@@ -335,8 +358,17 @@
     <pkg>RSKC</pkg>
     <pkg>rsig</pkg>
     <pkg>sandwich</pkg>
-    <pkg>ssmrob</pkg> 
+    <pkg>ssmrob</pkg>
     <pkg>wle</pkg>
+    <pkg>robustgam</pkg>
+    <pkg>robustloggamma</pkg>
+    <pkg>robustreg</pkg>
+    <pkg>ror</pkg>
+    <pkg>rorutadis</pkg>
+    <pkg>TEEReg</pkg>
+    <pkg>robustDA</pkg>
+    <pkg>WRS2</pkg>
+    <pkg>robeth</pkg>
   </packagelist>
 
   <links>
