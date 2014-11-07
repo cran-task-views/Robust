@@ -270,8 +270,8 @@
 
       <li><i>Collections of several methodologies</i>:
 	<ul>
-	  <li> <pkg>WRS2</pkg> contains (currently only a very small part) of the
-	    function of Rand Wilcox.</li>
+	  <li> <pkg>WRS2</pkg> contains <!-- currently (2014-11) -->
+	    robust tests for ANOVA and ANCOVA from Rand Wilcox's collection.</li>
 
 	  <li> <pkg>robeth</pkg> contains R functions interfacing to the extensive
 	    RobETH fortran library with many functions for regression,
@@ -372,8 +372,9 @@
   </packagelist>
 
   <links>
-    <a href="http://www.statistik.tuwien.ac.at/rsr/">Robust Statistics in R (TU Vienna)</a>
+    Mailing list:
     <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-robust/">R Special Interest Group on Robust Statistics</a>
+    <a href="http://www.statistik.tuwien.ac.at/rsr/">Robust Statistics in R (TU Vienna)</a>
     <rforge>distr</rforge>
     <rforge>robast</rforge>
     <rforge>robkalman</rforge>
