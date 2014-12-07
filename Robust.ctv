@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2014-10-17</version>
+  <version>2014-12-07</version>
 
   <info>
     <p>
@@ -253,11 +253,6 @@
 	censored data.
       </li>
 
-      <li><i>Robust Methods in Biostatistics (outside of Survival A.)</i>:
-	<pkg>RECSO</pkg>for robust and efficient analysis of the effect of
-        exposure on a secondary outcome in a case-control study.
-      </li>
-
       <li><i>Robust Methods for Surveys</i>:
 	On R-forge only, package <rforge>rhte</rforge> provides a robust
 	Horvitz-Thompson estimator.
@@ -337,7 +332,6 @@
     <pkg>OutlierDM</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
-    <pkg>RECSO</pkg>
     <pkg>rgam</pkg>
     <pkg>ROptEst</pkg>
     <pkg>ROptRegTS</pkg>
