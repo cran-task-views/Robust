@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2016-04-26</version>
+  <version>2016-08-29</version>
 
   <info>
     <p>
@@ -112,8 +112,8 @@
 	where package <pkg>robustloggamma</pkg> focuses on generalized log
 	gamma models.
 
-	Robust ordinal regression is provided by packages
-	<pkg>ror</pkg> (MCDA) and <pkg>rorutadis</pkg> (UTADIS).
+	Robust ordinal regression is provided by
+	<pkg>rorutadis</pkg> (UTADIS).
 
 	Robust Nonlinear model fitting is available through
 	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
@@ -358,7 +358,6 @@
     <pkg>robustgam</pkg>
     <pkg>robustloggamma</pkg>
     <pkg>robustreg</pkg>
-    <pkg>ror</pkg>
     <pkg>rorutadis</pkg>
     <pkg>TEEReg</pkg>
     <pkg>robustDA</pkg>
