@@ -369,7 +369,7 @@
   <links>
     Mailing list:
     <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-robust/">R Special Interest Group on Robust Statistics</a>
-    <a href="http://www.statistik.tuwien.ac.at/rsr/">Robust Statistics in R (TU Vienna)</a>
+    <a href="http://cstat.tuwien.ac.at/rsr/">Robust Statistics in R (TU Vienna)</a>
     <rforge>distr</rforge>
     <rforge>robast</rforge>
     <rforge>robkalman</rforge>
