@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2016-08-29</version>
+  <version>2018-05-25</version>
 
   <info>
     <p>
@@ -248,8 +248,7 @@
 
       <li><i>Robust Methods for Survival Analysis</i>:
 	Package <pkg>coxrobust</pkg> provides robust estimation in the Cox
-	model; package <pkg>rsig</pkg> does robust signature selection for
-	survival outcomes.
+	model.
 	<pkg>OutlierDC</pkg> detects outliers using quantile regression for
 	censored data.
       </li>
@@ -351,7 +350,6 @@
     <pkg>rrcovHD</pkg>
     <pkg>rrcovNA</pkg>
     <pkg>RSKC</pkg>
-    <pkg>rsig</pkg>
     <pkg>sandwich</pkg>
     <pkg>ssmrob</pkg>
     <pkg>wle</pkg>
