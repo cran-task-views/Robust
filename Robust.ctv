@@ -142,7 +142,7 @@
 	emphasis on functional data are treated robustly also by <pkg>roahd</pkg>.
 
 	Specialized robust PCA packages are <pkg>pcaPP</pkg> (via
-	Projection Pursuit) <pkg>pcadapt</pkg>, <pkg>rpca</pkg> (incl "sparse")
+	Projection Pursuit), <pkg>rpca</pkg> (incl "sparse")
 	and <pkg>rospca</pkg>.
 	Historically, note that robust PCA can be performed by using standard
 	R's <code>princomp()</code>, e.g.,
@@ -364,7 +364,6 @@
     <pkg>otrimle</pkg>
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
-    <pkg>pcadapt</pkg>
     <pkg>pcaPP</pkg>
     <pkg>qclust</pkg>
     <pkg>quantreg</pkg>
