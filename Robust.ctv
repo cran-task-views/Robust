@@ -125,126 +125,149 @@
 	i.e., robust Generalized Additive Models.
 
 	<pkg>drgee</pkg> fits "Doubly Robust" Generalized Estimating Equations (GEEs)
+	<pkg>complmrob</pkg> does robust linear regression with compositional data as covariates.
 
       </li>
 
       <li><i>Multivariate Analysis</i>:
 
-      Here, the <pkg>rrcov</pkg> package which builds ("<code>Depends</code>")
-      on <pkg>robustbase</pkg> provides nice S4 class based methods,
-      more methods for robust multivariate variance-covariance estimation,
-      and adds robust PCA methodology. <!-- .... FIXME; there's more . -->
-      It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
-      methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
-      <pkg>rrcovHD</pkg>, providing robust multivariate methods for
-      <em>High Dimensional</em> data.  High dimensional data with an
-      emphasis on functional data are treated robustly also by <pkg>roahd</pkg>.
+	Here, the <pkg>rrcov</pkg> package which builds ("<code>Depends</code>")
+	on <pkg>robustbase</pkg> provides nice S4 class based methods,
+	more methods for robust multivariate variance-covariance estimation,
+	and adds robust PCA methodology.
+	It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
+	methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
+	<pkg>rrcovHD</pkg>, providing robust multivariate methods for
+	<em>High Dimensional</em> data.  High dimensional data with an
+	emphasis on functional data are treated robustly also by <pkg>roahd</pkg>.
 
-      Here, <pkg>robustbase</pkg> contains a slightly more flexible
-      version, <code>covMcd()</code> than <pkg>robust</pkg>'s
-      <code>fastmcd()</code>, and similarly for <code>covOGK()</code>.
-      OTOH, <pkg>robust</pkg>'s <code>covRob()</code> has automatically chosen
-      methods, notably <code>pairwiseQC()</code> for large dimensionality p.
+	Specialized robust PCA packages are <pkg>pcaPP</pkg> (via
+	Projection Pursuit) <pkg>pcadapt</pkg>, <pkg>rpca</pkg> (incl "sparse")
+	and <pkg>rospca</pkg>.
+	Historically, note that robust PCA can be performed by using standard
+	R's <code>princomp()</code>, e.g.,
+	<code> X &lt;- stackloss; pc.rob &lt;- princomp(X, covmat= MASS::cov.rob(X))</code>
 
-      Package <pkg>robustX</pkg> for experimental, or other not yet
-      established procedures, contains <code>BACON()</code> and
-      <code>covNCC()</code>, the latter providing the
-      neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
-      also available (slightly less optimized) in <pkg>covRobust</pkg>.
+	Here, <pkg>robustbase</pkg> contains a slightly more flexible
+	version, <code>covMcd()</code> than <pkg>robust</pkg>'s
+	<code>fastmcd()</code>, and similarly for <code>covOGK()</code>.
+	OTOH, <pkg>robust</pkg>'s <code>covRob()</code> has automatically chosen
+	methods, notably <code>pairwiseQC()</code> for large dimensionality p.
 
-      <pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
+	Package <pkg>robustX</pkg> for experimental, or other not yet
+	established procedures, contains <code>BACON()</code> and
+	<code>covNCC()</code>, the latter providing the
+	neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
+	also available (slightly less optimized) in <pkg>covRobust</pkg>.
 
-      <pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
-      several methods for outlier identification in high dimensions.
+	<pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
 
-      <pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
+	<pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
+	several methods for outlier identification in high dimensions.
 
-      <pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
-      and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
-      multivariate regression, PCA and Hotelling tests.
+	<pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
 
-      <pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
-      <b>K</b>-means <b>C</b>lustering.
-      <pkg>robustDA</pkg> for <em>robust mixture Discriminant Analysis</em>
-      (RMDA) builds a mixture model classifier with noisy class labels.
+	<pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
+	and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
+	multivariate regression, PCA and Hotelling tests.
 
-      <pkg>robcor</pkg> computes robust pairwise correlations based on scale estimates,
-      particularly on <code>FastQn()</code>.
+	<pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
+	<b>K</b>-means <b>C</b>lustering.
+	<pkg>robustDA</pkg> for <em>robust mixture Discriminant Analysis</em>
+	(RMDA) builds a mixture model classifier with noisy class labels.
 
-      <pkg>covRobust</pkg> provides the
-      nearest neighbor variance estimation (NNVE) method of Wang and
-      Raftery (2002).
+	<pkg>robcor</pkg> computes robust pairwise correlations based on scale estimates,
+	particularly on <code>FastQn()</code>.
 
-<!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
-<!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
-<!-- did *not* escape '%' !! -->
+	<pkg>covRobust</pkg> provides the
+	nearest neighbor variance estimation (NNVE) method of Wang and
+	Raftery (2002).
 
-      Note that robust PCA can be performed by using standard
-      R's <code>princomp()</code>, e.g.,
-      <code> X &lt;- stackloss; pc.rob &lt;- princomp(X, covmat= MASS::cov.rob(X))</code>
+  <!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
+  <!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
+  <!-- did *not* escape '%' !! -->
 
-
-      See also the CRAN task views
-          <view>Multivariate</view> and
-          <view>Cluster</view>
       </li>
 
-      <li><i>Large Data Sets</i>: <code>BACON()</code> (in <pkg>robustX</pkg>)
-        should be applicable for larger (n,p) than traditional robust
-        covariance based outlier detectors.
+      <li><i>Clustering (Multivariate)</i>:
+	We are <em>not</em> considering cluster-resistant variance (/standard error)
+	estimation (aka "sandwich").  Rather e.g. model based
+	and hierarchical clustering methodology with a particular emphasis
+	on robustness:  Note that <pkg>cluster</pkg>'s <code>pam()</code>
+	implementing "partioning around medians" is partly robust (medians
+	instead of very unrobust k-means) but is <em>not</em> good enough,
+	as e.g., the  k  clusters could consist of  k-1  outliers one
+	cluster for the bulk of the remaining data.
+        "Truly" robust clustering is provided by packages
+	<pkg>genie</pkg>,
+	<pkg>Gmedian</pkg>, <!-- check, really ?? -->
+	<pkg>otrimle</pkg> (trimmed MLE model-based)
+	<pkg>snipEM</pkg>, (snipping EM)
+	and <pkg>qclust</pkg> (robust estim. of Gaussian mixtures) and
+	notably <pkg>tclust</pkg> (robust trimmed clustering).
 
-	<pkg>OutlierDM</pkg> detects outliers for replicated high-throughput data.
 
-	(See also the CRAN task view <view>MachineLearning</view>.)</li>
+	See also the CRAN task views
+	    <view>Multivariate</view> and
+	    <view>Cluster</view>
+	</li>
 
-      <li><i>Descriptive Statistics / Exploratory Data Analysis</i>:
-	<code>boxplot.stats()</code>, etc mentioned above </li>
+	<li><i>Large Data Sets</i>: <code>BACON()</code> (in <pkg>robustX</pkg>)
+	  should be applicable for larger (n,p) than traditional robust
+	  covariance based outlier detectors.
 
-      <li><i>Time Series</i>:
-	<ul>
-	  <li> R's <code>runmed()</code> provides <i>most robust</i>
-	    running median filtering.</li>
-	  <li>
-	    Package <pkg>robfilter</pkg> contains robust regression and
-	    filtering methods for univariate time series, typically based on
-	    repeated (weighted) median regressions.</li>
+	  <pkg>OutlierDM</pkg> detects outliers for replicated high-throughput data.
 
-	  <li>
-	    The <pkg>RobPer</pkg> provides several methods for robust
-	    periodogram estimation, notably for irregularly spaced time series.</li>
+	  (See also the CRAN task view <view>MachineLearning</view>.)</li>
 
-	  <li>
-	    Peter Ruckdeschel has started to lead an effort for a robust
-	    time-series package, see <rforge>robust-ts</rforge> on R-Forge.</li>
+	<li><i>Descriptive Statistics / Exploratory Data Analysis</i>:
+	  <code>boxplot.stats()</code>, etc mentioned above </li>
 
-	  <li>
-	    Further, robKalman, <i>"Routines for Robust Kalman
-	    Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
-	    <rforge>robkalman</rforge> on R-Forge.</li>
-	</ul>
-	Note however that these (last two items) are not yet available from CRAN.
-        </li>
+	<li><i>Time Series</i>:
+	  <ul>
+	    <li> R's <code>runmed()</code> provides <i>most robust</i>
+	      running median filtering.</li>
+	    <li>
+	      Package <pkg>robfilter</pkg> contains robust regression and
+	      filtering methods for univariate time series, typically based on
+	      repeated (weighted) median regressions.</li>
 
-      <li><i>Econometric Models</i>:
+	    <li>
+	      The <pkg>RobPer</pkg> provides several methods for robust
+	      periodogram estimation, notably for irregularly spaced time series.</li>
 
-	Econometricians tend to like HAC (heteroscedasticity and
-        autocorrelation corrected) standard errors. For a broad class of
-        models, these are provided by package <pkg>sandwich</pkg>.
+	    <li>
+	      Peter Ruckdeschel has started to lead an effort for a robust
+	      time-series package, see <rforge>robust-ts</rforge> on R-Forge.</li>
 
-	Note that <code>vcov(lmrob())</code> also uses a version of HAC
-	standard errors for its robustly estimated linear models.
+	    <li>
+	      Further, robKalman, <i>"Routines for Robust Kalman
+	      Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
+	      <rforge>robkalman</rforge> on R-Forge.</li>
+	  </ul>
+	  Note however that these (last two items) are not yet available from CRAN.
+	  </li>
 
-	See also the CRAN task view <view>Econometrics</view>
-      </li>
+	<li><i>Econometric Models</i>:
 
-      <li><i>Robust Methods for Bioinformatics</i>:
-      There are several packages in the <a
-      href="http://www.bioconductor.org/">Bioconductor project</a>
-      providing specialized robust methods.
+	  Econometricians tend to like HAC (heteroscedasticity and
+	  autocorrelation corrected) standard errors. For a broad class of
+	  models, these are provided by package <pkg>sandwich</pkg>.
 
-      In addition, <pkg>RobLoxBioC</pkg> provides infinitesimally robust
-      estimators for preprocessing omics data.
-       </li>
+	  Note that <code>vcov(lmrob())</code> also uses a version of HAC
+	  standard errors for its robustly estimated linear models.
+
+	  See also the CRAN task view <view>Econometrics</view>
+	</li>
+
+	<li><i>Robust Methods for Bioinformatics</i>:
+	There are several packages in the <a
+	href="http://www.bioconductor.org/">Bioconductor project</a>
+	providing specialized robust methods.
+
+	In addition, <pkg>RobLoxBioC</pkg> provides infinitesimally robust
+	estimators for preprocessing omics data.
+	</li>
 
       <li><i>Robust Methods for Survival Analysis</i>:
 	Package <pkg>coxrobust</pkg> provides robust estimation in the Cox
@@ -253,43 +276,46 @@
 	censored data.
       </li>
 
-      <li><i>Robust Methods for Surveys</i>:
-	On R-forge only, package <rforge>rhte</rforge> provides a robust
-	Horvitz-Thompson estimator.
-      </li>
+	<li><i>Robust Methods for Surveys</i>:
+	  On R-forge only, package <rforge>rhte</rforge> provides a robust
+	  Horvitz-Thompson estimator.
+	</li>
 
-      <li><i>Geostatistics</i>:
-      	Package <pkg>georob</pkg> aims at robust geostatistical
-      	analysis of spatial data, such as kriging and more.
-      </li>
+	<li><i>Geostatistics</i>:
+	  Package <pkg>georob</pkg> aims at robust geostatistical
+	  analysis of spatial data, such as kriging and more.
+	</li>
 
-      <li><i>Collections of several methodologies</i>:
-	<ul>
-	  <li> <pkg>WRS2</pkg> contains <!-- currently (2014-11) -->
-	    robust tests for ANOVA and ANCOVA from Rand Wilcox's collection.</li>
+	<li><i>Collections of several methodologies</i>:
+	  <ul>
+	    <li> <pkg>WRS2</pkg> contains <!-- currently (2014-11) -->
+	      robust tests for ANOVA and ANCOVA and other functionality from
+	      Rand Wilcox's  collection.</li>
+	    <li> <pkg>walrus</pkg> builds on <pkg>WRS2</pkg>'s computations,
+	    providing a different user interface.</li>
 
-	  <li> <pkg>robeth</pkg> contains R functions interfacing to the extensive
-	    RobETH fortran library with many functions for regression,
-	    multivariate estimation and more.</li>
-	</ul>
-      </li>
+	    <li> <pkg>robeth</pkg> contains R functions interfacing to the extensive
+	      RobETH fortran library with many functions for regression,
+	      multivariate estimation and more.</li>
+	  </ul>
+	</li>
 
-      <li><i>Other approaches to robust and resistant methodology</i>:
-	<ul>
-	  <li>
-	    The package <pkg>distr</pkg> and its several child packages
-	    also allow to explore robust estimation concepts, see e.g.,
-	    <rforge>distr</rforge> on R-Forge.</li>
-	  <li>
-	    Notably, based on these,
-	    the project <rforge>robast</rforge> aims for the implementation of R
-	    packages for the computation of optimally robust estimators and
-	    tests as well as the necessary infrastructure (mainly S4 classes
-	    and methods) and diagnostics; cf. M. Kohl (2005).
-	    It includes the R packages
-	    <pkg>RandVar</pkg>, <pkg>RobAStBase</pkg>, <pkg>RobLox</pkg>,
-	    <pkg>RobLoxBioC</pkg>, <pkg>RobRex</pkg>.
-	    Further, <pkg>ROptEst</pkg>, and <pkg>ROptRegTS</pkg>.
+	<li><i>Other approaches to robust and resistant methodology</i>:
+	  <ul>
+	    <li>
+	      The package <pkg>distr</pkg> and its several child packages
+	      also allow to explore robust estimation concepts, see e.g.,
+	      <rforge>distr</rforge> on R-Forge.</li>
+	    <li>
+	      Notably, based on these,
+	      the project <rforge>robast</rforge> aims for the implementation of R
+	      packages for the computation of optimally robust estimators and
+	      tests as well as the necessary infrastructure (mainly S4 classes
+	      and methods) and diagnostics; cf. M. Kohl (2005).
+	      It includes the R packages
+	      <pkg>RandVar</pkg>, <pkg>RobAStBase</pkg>, <pkg>RobLox</pkg>,
+	      <pkg>RobLoxBioC</pkg>, <pkg>RobRex</pkg>.
+	      Further, <pkg>ROptEst</pkg>, and <pkg>ROptRegTS</pkg>.
 	  </li>
 	  <li> <pkg>RobustAFT</pkg> computes Robust Accelerated Failure
 	  Time Regression for Gaussian and logWeibull errors.
@@ -300,7 +326,9 @@
 	    fracdiff).
 	  </li>
 
-	  <li><pkg>robumeta</pkg> for robust variance meta-regression </li>
+	  <li><pkg>robumeta</pkg> for robust variance meta-regression;
+	    <pkg>metaplus</pkg> adds robustness via t- or mixtures of
+	    normal distributions.</li>
 
 	  <li><pkg>ssmrob</pkg> provides robust estimation and inference in sample selection models.
 	  </li>
@@ -317,26 +345,36 @@
     <pkg priority="core">robust</pkg>
     <pkg priority="core">rrcov</pkg>
 
+    <pkg>cluster</pkg>
+    <pkg>complmrob</pkg>
     <pkg>covRobust</pkg>
     <pkg>coxrobust</pkg>
     <pkg>distr</pkg>
     <pkg>drgee</pkg>
     <pkg>FRB</pkg>
+    <pkg>genie</pkg>
     <pkg>georob</pkg>
+    <pkg>Gmedian</pkg>
     <pkg>GSE</pkg>
-    <pkg>multinomRob</pkg>
     <pkg>lqmm</pkg>
     <pkg>mblm</pkg>
+    <pkg>metaplus</pkg>
+    <pkg>multinomRob</pkg>
     <pkg>mvoutlier</pkg>
+    <pkg>otrimle</pkg>
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
+    <pkg>pcadapt</pkg>
+    <pkg>pcaPP</pkg>
+    <pkg>qclust</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
     <pkg>rgam</pkg>
-    <pkg>ROptEst</pkg>
-    <pkg>ROptRegTS</pkg>
-    <pkg>robcor</pkg>
+    <pkg>roahd</pkg>
     <pkg>RobAStBase</pkg>
+    <pkg>robcor</pkg>
+    <pkg>robeth</pkg>
+    <pkg>robfilter</pkg>
     <pkg>RobLox</pkg>
     <pkg>RobLoxBioC</pkg>
     <pkg>RobPer</pkg>
@@ -344,24 +382,28 @@
     <pkg>RobRSVD</pkg>
     <pkg>robumeta</pkg>
     <pkg>RobustAFT</pkg>
-    <pkg>robfilter</pkg>
+    <pkg>robustDA</pkg>
+    <pkg>robustgam</pkg>
     <pkg>robustlmm</pkg>
+    <pkg>robustloggamma</pkg>
+    <pkg>robustreg</pkg>
     <pkg>robustX</pkg>
+    <pkg>ROptEst</pkg>
+    <pkg>ROptRegTS</pkg>
+    <pkg>rorutadis</pkg>
+    <pkg>rospca</pkg>
+    <pkg>rpca</pkg>
     <pkg>rrcovHD</pkg>
     <pkg>rrcovNA</pkg>
     <pkg>RSKC</pkg>
     <pkg>sandwich</pkg>
+    <pkg>snipEM</pkg>
     <pkg>ssmrob</pkg>
-    <pkg>wle</pkg>
-    <pkg>robustgam</pkg>
-    <pkg>robustloggamma</pkg>
-    <pkg>robustreg</pkg>
-    <pkg>rorutadis</pkg>
+    <pkg>tclust</pkg>
     <pkg>TEEReg</pkg>
-    <pkg>robustDA</pkg>
+    <pkg>walrus</pkg>
+    <pkg>wle</pkg>
     <pkg>WRS2</pkg>
-    <pkg>robeth</pkg>
-    <pkg>roahd</pkg>
   </packagelist>
 
   <links>
