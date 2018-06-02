@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2018-05-25</version>
+  <version>2018-06-02</version>
 
   <info>
     <p>
@@ -320,11 +320,6 @@
 	  <li> <pkg>RobustAFT</pkg> computes Robust Accelerated Failure
 	  Time Regression for Gaussian and logWeibull errors.
 	  </li>
-	  <li> <pkg>wle</pkg> <i>Weighted Likelihood Estimation</i> provides
-	    robustified likelihood estimation for a range of models,
-	    notably (generalized) regression, and time series (AR and
-	    fracdiff).
-	  </li>
 
 	  <li><pkg>robumeta</pkg> for robust variance meta-regression;
 	    <pkg>metaplus</pkg> adds robustness via t- or mixtures of
@@ -401,7 +396,6 @@
     <pkg>tclust</pkg>
     <pkg>TEEReg</pkg>
     <pkg>walrus</pkg>
-    <pkg>wle</pkg>
     <pkg>WRS2</pkg>
   </packagelist>
 
