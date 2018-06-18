@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2018-06-02</version>
+  <version>2018-06-18</version>
 
   <info>
     <p>
@@ -166,10 +166,6 @@
 	several methods for outlier identification in high dimensions.
 
 	<pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
-
-	<pkg>FRB</pkg> performs robust inference based on <b>F</b>ast
-	and <b>R</b>obust <b>B</b>ootstrap on robust estimators, including
-	multivariate regression, PCA and Hotelling tests.
 
 	<pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
 	<b>K</b>-means <b>C</b>lustering.
@@ -346,7 +342,6 @@
     <pkg>coxrobust</pkg>
     <pkg>distr</pkg>
     <pkg>drgee</pkg>
-    <pkg>FRB</pkg>
     <pkg>genie</pkg>
     <pkg>georob</pkg>
     <pkg>Gmedian</pkg>
