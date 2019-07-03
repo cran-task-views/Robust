@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2018-06-18</version>
+  <version>2019-07-03</version>
 
   <info>
     <p>
@@ -121,7 +121,7 @@
 	<pkg>multinomRob</pkg> fits overdispersed multinomial regression
 	models for count data.
 
-	<pkg>rgam</pkg> and <pkg>robustgam</pkg> both fit robust GAMs,
+	<pkg>robustgam</pkg> fits robust GAMs,
 	i.e., robust Generalized Additive Models.
 
 	<pkg>drgee</pkg> fits "Doubly Robust" Generalized Estimating Equations (GEEs)
@@ -358,7 +358,6 @@
     <pkg>qclust</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
-    <pkg>rgam</pkg>
     <pkg>roahd</pkg>
     <pkg>RobAStBase</pkg>
     <pkg>robcor</pkg>
