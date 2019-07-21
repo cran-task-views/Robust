@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2019-07-03</version>
+  <version>2019-07-22</version>
 
   <info>
     <p>
@@ -198,8 +198,7 @@
 	<pkg>genie</pkg>,
 	<pkg>Gmedian</pkg>, <!-- check, really ?? -->
 	<pkg>otrimle</pkg> (trimmed MLE model-based)
-	<pkg>snipEM</pkg>, (snipping EM)
-	and <pkg>qclust</pkg> (robust estim. of Gaussian mixtures) and
+	<pkg>snipEM</pkg>, (snipping EM) and
 	notably <pkg>tclust</pkg> (robust trimmed clustering).
 
 
@@ -355,7 +354,6 @@
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
     <pkg>pcaPP</pkg>
-    <pkg>qclust</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
     <pkg>roahd</pkg>
