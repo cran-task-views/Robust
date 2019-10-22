@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2019-07-22</version>
+  <version>2019-10-22</version>
 
   <info>
     <p>
@@ -135,8 +135,7 @@
 	on <pkg>robustbase</pkg> provides nice S4 class based methods,
 	more methods for robust multivariate variance-covariance estimation,
 	and adds robust PCA methodology.
-	It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
-	methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
+	It is extended by
 	<pkg>rrcovHD</pkg>, providing robust multivariate methods for
 	<em>High Dimensional</em> data.  High dimensional data with an
 	emphasis on functional data are treated robustly also by <pkg>roahd</pkg>.
@@ -380,7 +379,6 @@
     <pkg>rospca</pkg>
     <pkg>rpca</pkg>
     <pkg>rrcovHD</pkg>
-    <pkg>rrcovNA</pkg>
     <pkg>RSKC</pkg>
     <pkg>sandwich</pkg>
     <pkg>snipEM</pkg>
