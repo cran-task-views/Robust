@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2019-10-22</version>
+  <version>2020-02-20</version>
 
   <info>
     <p>
@@ -103,8 +103,6 @@
 
 	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
 	median-based (Theil-Sen or Siegel's repeated) simple linear models.
-	Package <pkg>TEEReg</pkg> provides trimmed elemental estimators for
-	linear models.<!-- not convincing to MM -->
 
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
@@ -384,7 +382,6 @@
     <pkg>snipEM</pkg>
     <pkg>ssmrob</pkg>
     <pkg>tclust</pkg>
-    <pkg>TEEReg</pkg>
     <pkg>walrus</pkg>
     <pkg>WRS2</pkg>
   </packagelist>
