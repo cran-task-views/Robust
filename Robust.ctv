@@ -1,13 +1,16 @@
 <CRANTaskView> <!-- emacs, please treat me as -*- html -*- -->
   <!-- to test *AND* find CRAN packages,
   do use ~/R/MM/Pkg-ex/robustness-ctv.R  <<=== TODO there !!
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  2020-03-05: "S+plus library" 'robust' has been orphaned and archived on CRAN
+  Replacing <pkg>robust</pkg> by <code>robust</code>> for now
+  -->
 
   <name>Robust</name>
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2020-02-20</version>
+  <version>2020-03-05</version>
 
   <info>
     <p>
@@ -54,12 +57,14 @@
     building on top and extending the essential functionality to particular
     models or applications.
 
-    Further, there is the quite comprehensive package
-    <pkg>robust</pkg>, a version of the robust library of S-PLUS,
+    There has been a quite comprehensive package
+    <code>robust</code>, a version of the robust library of S-PLUS,
     as an R package now GPLicensed thanks to Insightful and Kjell Konis.
+    It has been orphaned and archived in early 2020 as no new maintainer
+    has come forward yet.
 
     Originally, there has been much overlap between 'robustbase'
-    and 'robust', now <pkg>robust</pkg> <em>depends</em>
+    and 'robust', now <code>robust</code> <em>depends</em>
     on <pkg>robustbase</pkg>, the former providing convenient routines for
     the casual user where the latter will contain the underlying
     functionality, and provide the more advanced statistician with a
@@ -68,13 +73,13 @@
 
     <p>We structure the packages roughly into the following topics, and
     typically will first mention functionality in packages
-    <pkg>robustbase</pkg> and <pkg>robust</pkg>.</p>
+    <pkg>robustbase</pkg> and <code>robust</code>.</p>
     <ul>
       <li><i>Regression (Linear, Generalized Linear, Nonlinear Models,
       incl. Mixed Effects)</i>:
 
 	<code>lmrob()</code> (<pkg>robustbase</pkg>) and <code>lmRob()</code>
-	(<pkg>robust</pkg>) where the former uses the latest of the
+	(<code>robust</code>) where the former uses the latest of the
 	fast-S algorithms and heteroscedasticity and autocorrelation corrected
 	(HAC) standard errors, the latter makes use of the M-S algorithm of
 	Maronna and Yohai (2000), automatically when there are factors
@@ -106,7 +111,7 @@
 
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
-	(<pkg>robust</pkg>), <!-- where the former is typically preferable -->
+	(<code>robust</code>), <!-- where the former is typically preferable -->
 	where package <pkg>robustloggamma</pkg> focuses on generalized log
 	gamma models.
 
@@ -146,9 +151,9 @@
 	<code> X &lt;- stackloss; pc.rob &lt;- princomp(X, covmat= MASS::cov.rob(X))</code>
 
 	Here, <pkg>robustbase</pkg> contains a slightly more flexible
-	version, <code>covMcd()</code> than <pkg>robust</pkg>'s
+	version, <code>covMcd()</code> than <code>robust</code>'s
 	<code>fastmcd()</code>, and similarly for <code>covOGK()</code>.
-	OTOH, <pkg>robust</pkg>'s <code>covRob()</code> has automatically chosen
+	OTOH, <code>robust</code>'s <code>covRob()</code> did have automatically chosen
 	methods, notably <code>pairwiseQC()</code> for large dimensionality p.
 
 	Package <pkg>robustX</pkg> for experimental, or other not yet
@@ -326,10 +331,11 @@
 
   <!-- >> sorted alphabetically in HTML irrespective of order here!
        ==> add newest at BOTTOM ! -->
+
+  <!-- orphaned & archived, Feb. 2020: <pkg priority="core">robust</pkg> -->
   <packagelist>
     <pkg priority="core">MASS</pkg>
     <pkg priority="core">robustbase</pkg>
-    <pkg priority="core">robust</pkg>
     <pkg priority="core">rrcov</pkg>
 
     <pkg>cluster</pkg>
