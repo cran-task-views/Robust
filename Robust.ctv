@@ -141,8 +141,7 @@
 	It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
 	methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
 	<pkg>rrcovHD</pkg>, providing robust multivariate methods for
-	<em>High Dimensional</em> data.  High dimensional data with an
-	emphasis on functional data are treated robustly also by <pkg>roahd</pkg>.
+	<em>High Dimensional</em> data.
 
 	Specialized robust PCA packages are <pkg>pcaPP</pkg> (via
 	Projection Pursuit), <pkg>rpca</pkg> (incl "sparse")
@@ -360,7 +359,6 @@
     <pkg>pcaPP</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
-    <pkg>roahd</pkg>
     <pkg>RobAStBase</pkg>
     <pkg>robcor</pkg>
     <pkg>robeth</pkg>
