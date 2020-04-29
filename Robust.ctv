@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2020-03-09</version>
+  <version>2020-04-29</version>
 
   <info>
     <p>
@@ -106,9 +106,7 @@
 
 	Generalized linear models (GLMs) are provided both via
 	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
-	(<pkg>robust</pkg>), <!-- where the former is typically preferable -->
-	where package <pkg>robustloggamma</pkg> focuses on generalized log
-	gamma models.
+	(<pkg>robust</pkg>). <!-- where the former is typically preferable -->
 
 	Robust ordinal regression is provided by
 	<pkg>rorutadis</pkg> (UTADIS).
@@ -367,7 +365,6 @@
     <pkg>robustDA</pkg>
     <pkg>robustgam</pkg>
     <pkg>robustlmm</pkg>
-    <pkg>robustloggamma</pkg>
     <pkg>robustreg</pkg>
     <pkg>robustX</pkg>
     <pkg>ROptEst</pkg>
