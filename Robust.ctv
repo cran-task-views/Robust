@@ -266,7 +266,7 @@
 	    <li>
 	      The <pkg>RobPer</pkg> provides several methods for robust
 	      periodogram estimation, notably for irregularly spaced time series.</li>
-
+	    <li>
 	      Peter Ruckdeschel has started to lead an effort for a robust
 	      time-series package, see <rforge>robust-ts</rforge> on R-Forge.</li>
 
