@@ -7,10 +7,10 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2020-04-29</version>
+  <version>2020-12-07</version>
 
-  <info>
-    <p>
+<info>
+<p>
     Robust (or "resistant") methods for statistics modelling have been
     available in S from the very beginning in the 1980s; and then in R in
     package <code>stats</code>.
@@ -60,19 +60,21 @@
 
     Originally, there has been much overlap between 'robustbase'
     and 'robust', now <pkg>robust</pkg> <em>depends</em>
-    on <pkg>robustbase</pkg>, the former providing convenient routines for
-    the casual user where the latter will contain the underlying
+    on <pkg>robustbase</pkg> and <pkg>rrcov</pkg>, where 'robust' provides
+    convenient routines for the casual user
+    while <pkg>robustbase</pkg> and <pkg>rrcov</pkg> contain the underlying
     functionality, and provide the more advanced statistician with a
     large range of options for robust modeling.
     </p>
 
     <p>We structure the packages roughly into the following topics, and
-    typically will first mention functionality in packages
-    <pkg>robustbase</pkg> and <pkg>robust</pkg>.</p>
-    <ul>
-      <li><i>Regression (Linear, Generalized Linear, Nonlinear Models,
-      incl. Mixed Effects)</i>:
+      typically will first mention functionality in packages
+      <pkg>robustbase</pkg>, <pkg>rrcov</pkg> and <pkg>robust</pkg>.
+    </p>
 
+<p><strong>Regression</strong></p>
+<ul> <!-- 3 parts of regression :  Linear, Generalized Lin., "remnant" -->
+  <li><i><strong>Linear</strong> Regression:</i><br> </br>
 	<code>lmrob()</code> (<pkg>robustbase</pkg>) and <code>lmRob()</code>
 	(<pkg>robust</pkg>) where the former uses the latest of the
 	fast-S algorithms and heteroscedasticity and autocorrelation corrected
@@ -96,53 +98,72 @@
 	special case, doing so also for nonparametric regression via
 	splines.
 
-	Quantile regression (and hence L1 or LAD) for mixed effect models,
-	is available in package <pkg>lqmm</pkg>, whereas an
-	<em>MM-like</em> approach for robust linear <b>mixed effects</b> modeling
-	is available from package <pkg>robustlmm</pkg>.
-
 	Package <pkg>mblm</pkg>'s function <code>mblm()</code> fits
 	median-based (Theil-Sen or Siegel's repeated) simple linear models.
+  </li>
 
-	Generalized linear models (GLMs) are provided both via
-	<code>glmrob()</code> (<pkg>robustbase</pkg>) and <code>glmRob()</code>
-	(<pkg>robust</pkg>). <!-- where the former is typically preferable -->
+  <li> <i><strong>Generalized</strong> Linear Models (<strong>GLM</strong>s) for Regression:</i>
+    <br> </br>
+	GLMs are provided both via <code>glmrob()</code> (<pkg>robustbase</pkg>)
+	and <code>glmRob()</code> (<pkg>robust</pkg>).
+	<!-- where the former is typically preferable -->
 
 	Robust ordinal regression is provided by
 	<pkg>rorutadis</pkg> (UTADIS).
 
-	Robust Nonlinear model fitting is available through
-	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
+	<pkg>drgee</pkg> fits "Doubly Robust" Generalized Estimating
+	Equations (GEEs), <pkg>complmrob</pkg> does robust linear
+	regression with compositional data as covariates.
 
 	<pkg>multinomRob</pkg> fits overdispersed multinomial regression
 	models for count data.
+  </li>
+
+  <li><i><strong>Mixed-Effects</strong> (Linear and Nonlinear) Regression:</i>  <br> </br>
+	Quantile regression (and hence L1 or LAD) for mixed effect models,
+	is available in package <pkg>lqmm</pkg>. Rank-based mixed effect fitting from
+	package <pkg>rlme</pkg>, whereas an
+	<em>MM-like</em> approach for robust linear <strong>mixed effects</strong> modeling
+	is available from package <pkg>robustlmm</pkg>.
+  </li>
+
+  <li><i><strong>Nonlinear / Smooth</strong> (Nonparametric Function) Regression:</i>
+    <br> </br>
+	Robust Nonlinear model fitting is available through
+	<pkg>robustbase</pkg>'s <code>nlrob()</code>.
 
 	<pkg>robustgam</pkg> fits robust GAMs,
 	i.e., robust Generalized Additive Models.
+  </li>
+</ul>
 
-	<pkg>drgee</pkg> fits "Doubly Robust" Generalized Estimating Equations (GEEs)
-	<pkg>complmrob</pkg> does robust linear regression with compositional data as covariates.
 
-      </li>
-
-      <li><i>Multivariate Analysis</i>:
-
+<p><strong>Multivariate Analysis:</strong></p>
+<ul>
+ <li>
 	Here, the <pkg>rrcov</pkg> package which builds ("<code>Depends</code>")
 	on <pkg>robustbase</pkg> provides nice S4 class based methods,
 	more methods for robust multivariate variance-covariance estimation,
 	and adds robust PCA methodology.
-	It is extended by <pkg>rrcovNA</pkg>, providing robust multivariate
-	methods for <em>for incomplete</em> or missing (<code>NA</code>) data, and by
+	</li>
+
+ <li> 'rrcov' is extended by <pkg>rrcovNA</pkg>, providing robust
+	multivariate methods for <em>for incomplete</em> or missing
+	(<code>NA</code>) data, and by
 	<pkg>rrcovHD</pkg>, providing robust multivariate methods for
 	<em>High Dimensional</em> data.
+	</li>
 
+ <li>
 	Specialized robust PCA packages are <pkg>pcaPP</pkg> (via
 	Projection Pursuit), <pkg>rpca</pkg> (incl "sparse")
 	and <pkg>rospca</pkg>.
 	Historically, note that robust PCA can be performed by using standard
 	R's <code>princomp()</code>, e.g.,
 	<code> X &lt;- stackloss; pc.rob &lt;- princomp(X, covmat= MASS::cov.rob(X))</code>
+	</li>
 
+ <li>
 	Here, <pkg>robustbase</pkg> contains a slightly more flexible
 	version, <code>covMcd()</code> than <pkg>robust</pkg>'s
 	<code>fastmcd()</code>, and similarly for <code>covOGK()</code>.
@@ -154,33 +175,44 @@
 	<code>covNCC()</code>, the latter providing the
 	neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
 	also available (slightly less optimized) in <pkg>covRobust</pkg>.
+	</li>
 
+ <li>
 	<pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
-
+	</li>
+ <li>
 	<pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
 	several methods for outlier identification in high dimensions.
-
+	</li>
+ <li>
 	<pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
-
+	</li>
+ <li>
 	<pkg>RSKC</pkg> provides <b>R</b>obust <b>S</b>parse
 	<b>K</b>-means <b>C</b>lustering.
+	</li>
+ <li>
 	<pkg>robustDA</pkg> for <em>robust mixture Discriminant Analysis</em>
 	(RMDA) builds a mixture model classifier with noisy class labels.
-
+	</li>
+ <li>
 	<pkg>robcor</pkg> computes robust pairwise correlations based on scale estimates,
 	particularly on <code>FastQn()</code>.
-
+	</li>
+ <li>
 	<pkg>covRobust</pkg> provides the
 	nearest neighbor variance estimation (NNVE) method of Wang and
 	Raftery (2002).
-
+	</li>
   <!-- Package <pkg>MCLIME</pkg>'s function <code>m.clime())</code> fits -->
   <!-- constrained L1 ...  MM: Its example never ran correctly, as they -->
   <!-- did *not* escape '%' !! -->
+</ul>
 
-      </li>
 
-      <li><i>Clustering (Multivariate)</i>:
+<p><strong>Clustering (Multivariate):</strong></p>
+<ul>
+ <li>
 	We are <em>not</em> considering cluster-resistant variance (/standard error)
 	estimation (aka "sandwich").  Rather e.g. model based
 	and hierarchical clustering methodology with a particular emphasis
@@ -189,32 +221,41 @@
 	instead of very unrobust k-means) but is <em>not</em> good enough,
 	as e.g., the  k  clusters could consist of  k-1  outliers one
 	cluster for the bulk of the remaining data.
+	</li>
+ <li>
         "Truly" robust clustering is provided by packages
 	<pkg>genie</pkg>,
 	<pkg>Gmedian</pkg>, <!-- check, really ?? -->
 	<pkg>otrimle</pkg> (trimmed MLE model-based)
 	<pkg>snipEM</pkg>, (snipping EM) and
 	notably <pkg>tclust</pkg> (robust trimmed clustering).
-
-
+	</li>
+ <li>
 	See also the CRAN task views
 	    <view>Multivariate</view> and
 	    <view>Cluster</view>
 	</li>
+</ul>
 
-	<li><i>Large Data Sets</i>: <code>BACON()</code> (in <pkg>robustX</pkg>)
+<p><strong>Large Data Sets:</strong></p>
+<ul>
+ <li> <code>BACON()</code> (in <pkg>robustX</pkg>)
 	  should be applicable for larger (n,p) than traditional robust
 	  covariance based outlier detectors.
-
-	  <pkg>OutlierDM</pkg> detects outliers for replicated high-throughput data.
-
+	</li>
+ <li>
+	<pkg>OutlierDM</pkg> detects outliers for replicated high-throughput data.
 	  (See also the CRAN task view <view>MachineLearning</view>.)</li>
+</ul>
 
-	<li><i>Descriptive Statistics / Exploratory Data Analysis</i>:
-	  <code>boxplot.stats()</code>, etc mentioned above </li>
+<p><strong>Descriptive Statistics / Exploratory Data Analysis:</strong></p>
+<ul>
+ <li>
+   <code>boxplot.stats()</code>, etc mentioned above </li>
+</ul>
 
-	<li><i>Time Series</i>:
-	  <ul>
+<p><strong>Time Series:</strong></p>
+<ul>
 	    <li> R's <code>runmed()</code> provides <i>most robust</i>
 	      running median filtering.</li>
 	    <li>
@@ -226,20 +267,20 @@
 	      The <pkg>RobPer</pkg> provides several methods for robust
 	      periodogram estimation, notably for irregularly spaced time series.</li>
 
-	    <li>
 	      Peter Ruckdeschel has started to lead an effort for a robust
 	      time-series package, see <rforge>robust-ts</rforge> on R-Forge.</li>
 
 	    <li>
 	      Further, robKalman, <i>"Routines for Robust Kalman
 	      Filtering --- the ACM- and rLS-filter"</i>, is being developed, see
-	      <rforge>robkalman</rforge> on R-Forge.</li>
-	  </ul>
-	  Note however that these (last two items) are not yet available from CRAN.
-	  </li>
+	      <rforge>robkalman</rforge> on R-Forge.
+	      <br>
+	      Note however that these (last two items) are not yet available from CRAN.</br>
+	    </li>
+</ul>
 
-	<li><i>Econometric Models</i>:
-
+<p><strong>Econometric Models:</strong></p>
+<ul> <li>
 	  Econometricians tend to like HAC (heteroscedasticity and
 	  autocorrelation corrected) standard errors. For a broad class of
 	  models, these are provided by package <pkg>sandwich</pkg>.
@@ -249,8 +290,10 @@
 
 	  See also the CRAN task view <view>Econometrics</view>
 	</li>
+</ul>
 
-	<li><i>Robust Methods for Bioinformatics</i>:
+<p><strong>Robust Methods for  Bioinformatics:</strong></p>
+<ul> <li>
 	There are several packages in the <a
 	href="http://www.bioconductor.org/">Bioconductor project</a>
 	providing specialized robust methods.
@@ -258,26 +301,34 @@
 	In addition, <pkg>RobLoxBioC</pkg> provides infinitesimally robust
 	estimators for preprocessing omics data.
 	</li>
+</ul>
 
-      <li><i>Robust Methods for Survival Analysis</i>:
+<p><strong>Robust Methods for  Survival Analysis:</strong></p>
+<ul> <li>
 	Package <pkg>coxrobust</pkg> provides robust estimation in the Cox
 	model.
 	<pkg>OutlierDC</pkg> detects outliers using quantile regression for
 	censored data.
       </li>
+</ul>
 
-	<li><i>Robust Methods for Surveys</i>:
+<p><strong>Robust Methods for  Surveys:</strong></p>
+<ul> <li>
 	  On R-forge only, package <rforge>rhte</rforge> provides a robust
 	  Horvitz-Thompson estimator.
 	</li>
+</ul>
 
-	<li><i>Geostatistics</i>:
+<p><strong>Geostatistics:</strong></p>
+<ul> <li>
 	  Package <pkg>georob</pkg> aims at robust geostatistical
 	  analysis of spatial data, such as kriging and more.
 	</li>
 
-	<li><i>Collections of several methodologies</i>:
-	  <ul>
+</ul>
+
+<p>Collections of <strong>Several</strong> Methodologies:</p>
+<ul>
 	    <li> <pkg>WRS2</pkg> contains <!-- currently (2014-11) -->
 	      robust tests for ANOVA and ANCOVA and other functionality from
 	      Rand Wilcox's  collection.</li>
@@ -287,11 +338,10 @@
 	    <li> <pkg>robeth</pkg> contains R functions interfacing to the extensive
 	      RobETH fortran library with many functions for regression,
 	      multivariate estimation and more.</li>
-	  </ul>
-	</li>
+</ul>
 
-	<li><i>Other approaches to robust and resistant methodology</i>:
-	  <ul>
+<p><strong>Other Approaches</strong> to robust and resistant methodology:</p>
+<ul>
 	    <li>
 	      The package <pkg>distr</pkg> and its several child packages
 	      also allow to explore robust estimation concepts, see e.g.,
@@ -317,10 +367,8 @@
 
 	  <li><pkg>ssmrob</pkg> provides robust estimation and inference in sample selection models.
 	  </li>
-	</ul>
-      </li>
-    </ul>
-  </info>
+</ul>
+</info>
 
   <!-- >> sorted alphabetically in HTML irrespective of order here!
        ==> add newest at BOTTOM ! -->
@@ -351,6 +399,7 @@
     <pkg>pcaPP</pkg>
     <pkg>quantreg</pkg>
     <pkg>RandVar</pkg>
+    <pkg>rlme</pkg>
     <pkg>RobAStBase</pkg>
     <pkg>robcor</pkg>
     <pkg>robeth</pkg>
