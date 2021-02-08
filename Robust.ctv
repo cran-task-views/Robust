@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2020-12-07</version>
+  <version>2021-02-08</version>
 
 <info>
 <p>
@@ -125,6 +125,10 @@
 	package <pkg>rlme</pkg>, whereas an
 	<em>MM-like</em> approach for robust linear <strong>mixed effects</strong> modeling
 	is available from package <pkg>robustlmm</pkg>.
+
+	More recently,  <pkg>skewlmm</pkg> provides robust
+	linear mixed-effects models <strong>LMM</strong> via
+	scale mixtures of skew-normal distributions.
   </li>
 
   <li><i><strong>Nonlinear / Smooth</strong> (Nonparametric Function) Regression:</i>
@@ -283,7 +287,8 @@
 <ul> <li>
 	  Econometricians tend to like HAC (heteroscedasticity and
 	  autocorrelation corrected) standard errors. For a broad class of
-	  models, these are provided by package <pkg>sandwich</pkg>.
+	  models, these are provided by package <pkg>sandwich</pkg>;
+	  similarly <pkg>clubSandwich</pkg> and <pkg>clusterSEs</pkg>.
 
 	  Note that <code>vcov(lmrob())</code> also uses a version of HAC
 	  standard errors for its robustly estimated linear models.
@@ -378,7 +383,9 @@
     <pkg priority="core">robust</pkg>
     <pkg priority="core">rrcov</pkg>
 
+    <pkg>clubSandwich</pkg>
     <pkg>cluster</pkg>
+    <pkg>clusterSEs</pkg>
     <pkg>complmrob</pkg>
     <pkg>covRobust</pkg>
     <pkg>coxrobust</pkg>
@@ -425,6 +432,7 @@
     <pkg>rrcovNA</pkg>
     <pkg>RSKC</pkg>
     <pkg>sandwich</pkg>
+    <pkg>skewlmm</pkg>
     <pkg>snipEM</pkg>
     <pkg>ssmrob</pkg>
     <pkg>tclust</pkg>
