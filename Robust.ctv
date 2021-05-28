@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2021-02-08</version>
+  <version>2021-05-28</version>
 
 <info>
 <p>
@@ -230,8 +230,7 @@
         "Truly" robust clustering is provided by packages
 	<pkg>genie</pkg>,
 	<pkg>Gmedian</pkg>, <!-- check, really ?? -->
-	<pkg>otrimle</pkg> (trimmed MLE model-based)
-	<pkg>snipEM</pkg>, (snipping EM) and
+	<pkg>otrimle</pkg> (trimmed MLE model-based) and
 	notably <pkg>tclust</pkg> (robust trimmed clustering).
 	</li>
  <li>
@@ -433,7 +432,6 @@
     <pkg>RSKC</pkg>
     <pkg>sandwich</pkg>
     <pkg>skewlmm</pkg>
-    <pkg>snipEM</pkg>
     <pkg>ssmrob</pkg>
     <pkg>tclust</pkg>
     <pkg>walrus</pkg>
