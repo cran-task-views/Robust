@@ -185,10 +185,6 @@
 	<pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
 	</li>
  <li>
-	<pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
-	several methods for outlier identification in high dimensions.
-	</li>
- <li>
 	<pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
 	</li>
  <li>
@@ -398,7 +394,6 @@
     <pkg>mblm</pkg>
     <pkg>metaplus</pkg>
     <pkg>multinomRob</pkg>
-    <pkg>mvoutlier</pkg>
     <pkg>otrimle</pkg>
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
