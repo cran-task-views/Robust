@@ -53,6 +53,10 @@
     coined <pkg>robustbase</pkg> with (potentially many) other packages
     building on top and extending the essential functionality to particular
     models or applications.
+    Since 2020 and the 2nd edition of <a href="http://www.wiley.com/go/maronna/robust">
+	<em>Robust Statistics: Theory and Methods</em> </a>,
+    <pkg>RobStatTM</pkg> covers its estimators and examples, notably by
+    importing from <pkg>robustbase</pkg> and <pkg>rrcov</pkg>.
 
     Further, there is the quite comprehensive package
     <pkg>robust</pkg>, a version of the robust library of S-PLUS,
@@ -415,6 +419,7 @@
     <pkg>RobPer</pkg>
     <pkg>RobRex</pkg>
     <pkg>RobRSVD</pkg>
+    <pkg>RobStatTM</pkg>
     <pkg>robumeta</pkg>
     <pkg>RobustAFT</pkg>
     <pkg>robustDA</pkg>
