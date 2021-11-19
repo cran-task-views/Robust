@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2021-05-28</version>
+  <version>2021-11-19</version>
 
 <info>
 <p>
@@ -183,6 +183,10 @@
 
  <li>
 	<pkg>RobRSVD</pkg> provides a robust Regularized Singular Value Decomposition.
+	</li>
+ <li>
+	<pkg>mvoutlier</pkg> (building on <pkg>robustbase</pkg>) provides
+	several methods for outlier identification in high dimensions.
 	</li>
  <li>
 	<pkg>GSE</pkg> estimates multivariate location and scatter in the presence of missing data.
@@ -394,6 +398,7 @@
     <pkg>mblm</pkg>
     <pkg>metaplus</pkg>
     <pkg>multinomRob</pkg>
+    <pkg>mvoutlier</pkg>
     <pkg>otrimle</pkg>
     <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
