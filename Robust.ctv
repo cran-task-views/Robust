@@ -7,7 +7,7 @@
   <topic>Robust Statistical Methods</topic>
   <!--  &amp; Resistant  ?? -->
   <maintainer email="Martin.Maechler@R-project.org">Martin Maechler</maintainer>
-  <version>2021-11-19</version>
+  <version>2021-11-23</version>
 
 <info>
 <p>
@@ -315,8 +315,6 @@
 <ul> <li>
 	Package <pkg>coxrobust</pkg> provides robust estimation in the Cox
 	model.
-	<pkg>OutlierDC</pkg> detects outliers using quantile regression for
-	censored data.
       </li>
 </ul>
 
@@ -404,7 +402,6 @@
     <pkg>multinomRob</pkg>
     <pkg>mvoutlier</pkg>
     <pkg>otrimle</pkg>
-    <pkg>OutlierDC</pkg>
     <pkg>OutlierDM</pkg>
     <pkg>pcaPP</pkg>
     <pkg>quantreg</pkg>
