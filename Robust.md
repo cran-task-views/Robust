@@ -3,7 +3,7 @@ name: Robust
 topic: Robust Statistical Methods
 maintainer: Martin Maechler
 email: Martin.Maechler@R-project.org
-version: 2021-12-30
+version: 2022-03-24
 source: https://github.com/cran-task-views/Robust/
 ---
 
