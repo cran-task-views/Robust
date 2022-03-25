@@ -164,7 +164,7 @@ typically will first mention functionality in packages
     `r pkg("genie")`, `r pkg("Gmedian")`,
     `r pkg("otrimle")` (trimmed MLE model-based) and notably
     `r pkg("tclust")` (robust trimmed clustering).
--   See also the `r view("Cluster") CRAN task view`
+-   See also the `r view("Cluster")` CRAN task view`
 
 ### Large Data Sets:
 
@@ -221,8 +221,8 @@ typically will first mention functionality in packages
 
 ### Robust Methods for Surveys:
 
--   On R-forge only, package `r rforge("rhte")` provides a
-    robust Horvitz-Thompson estimator.
+-   Package `r pkg("robsurvey")` provides robust survey regression estimation
+    and the robust Horvitz-Thompson estimator.
 
 ### Geostatistics:
 
