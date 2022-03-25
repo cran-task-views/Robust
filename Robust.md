@@ -18,7 +18,7 @@ nonparametric regression, which had been complemented by `runmed()` in
 recommended (and hence present in all R versions) package
 `r pkg("MASS", priority = "core")` (by Bill Venables and
 Brian Ripley, see *the* book [Modern Applied Statistics with
-S](http://www.stats.ox.ac.uk/pub/MASS4/) ). Most importantly, they
+S](https://www.stats.ox.ac.uk/pub/MASS4/)). Most importantly, they
 provide `rlm()` for robust regression and `cov.rob()` for robust
 multivariate scatter and covariance.
 
@@ -39,7 +39,7 @@ on a basic package with "Essentials", coined
 many) other packages building on top and extending the essential
 functionality to particular models or applications. Since 2020 and the
 2nd edition of [*Robust Statistics: Theory and
-Methods*](http://www.wiley.com/go/maronna/robust) ,
+Methods*](https://www.wiley.com/go/maronna/robust) ,
 `r pkg("RobStatTM")` covers its estimators and examples,
 notably by importing from `r pkg("robustbase")` and
 `r pkg("rrcov", priority = "core")`. Further, there is the
@@ -47,9 +47,9 @@ quite comprehensive package
 `r pkg("robust", priority = "core")`, a version of the robust
 library of S-PLUS, as an R package now GPLicensed thanks to Insightful
 and Kjell Konis. Originally, there has been much overlap between
-'robustbase' and 'robust', now `r pkg("robust")`
+`r pkg("robustbase")` and `r pkg("robust")`, now `r pkg("robust")`
 *depends* on `r pkg("robustbase")` and
-`r pkg("rrcov")`, where 'robust' provides convenient
+`r pkg("rrcov")`, where `r pkg("robust")` provides convenient
 routines for the casual user while `r pkg("robustbase")` and
 `r pkg("rrcov")` contain the underlying functionality, and
 provide the more advanced statistician with a large range of options for
@@ -62,7 +62,7 @@ typically will first mention functionality in packages
 
 ### Regression
 
--   ***Linear** Regression:*\
+-   ***Linear** Regression:*  
     `lmrob()` (`r pkg("robustbase")`) and `lmRob()`
     (`r pkg("robust")`) where the former uses the latest of
     the fast-S algorithms and heteroscedasticity and autocorrelation
@@ -80,9 +80,9 @@ typically will first mention functionality in packages
     regression package `r pkg("quantreg")` contains L1 (aka
     LAD, least absolute deviations)-regression as a special case, doing
     so also for nonparametric regression via splines. Package
-    `r pkg("mblm")` 's function `mblm()` fits median-based
+    `r pkg("mblm")`'s function `mblm()` fits median-based
     (Theil-Sen or Siegel's repeated) simple linear models.
--   ***Generalized** Linear Models ( **GLM** s) for Regression:*\
+-   ***Generalized** Linear Models ( **GLM** s) for Regression:*  
     GLMs are provided both via `glmrob()`
     (`r pkg("robustbase")`) and `glmRob()`
     (`r pkg("robust")`). Robust ordinal regression is
@@ -92,7 +92,7 @@ typically will first mention functionality in packages
     robust linear regression with compositional data as covariates.
     `r pkg("multinomRob")` fits overdispersed multinomial
     regression models for count data.
--   ***Mixed-Effects** (Linear and Nonlinear) Regression:*\
+-   ***Mixed-Effects** (Linear and Nonlinear) Regression:*  
     Quantile regression (and hence L1 or LAD) for mixed effect models,
     is available in package `r pkg("lqmm")`. Rank-based
     mixed effect fitting from package `r pkg("rlme")`,
@@ -101,20 +101,20 @@ typically will first mention functionality in packages
     More recently, `r pkg("skewlmm")` provides robust linear
     mixed-effects models **LMM** via scale mixtures of skew-normal
     distributions.
--   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*\
+-   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*  
     Robust Nonlinear model fitting is available through
-    `r pkg("robustbase")` 's `nlrob()`.
+    `r pkg("robustbase")`'s `nlrob()`.
     `r pkg("robustgam")` fits robust GAMs, i.e., robust
     Generalized Additive Models.
 
 ### Multivariate Analysis:
 
--   Here, the `r pkg("rrcov")` package which builds ("
-    `Depends` ") on `r pkg("robustbase")` provides nice S4
+-   Here, the `r pkg("rrcov")` package which builds (`Depends`)
+    on `r pkg("robustbase")` provides nice S4
     class based methods, more methods for robust multivariate
     variance-covariance estimation, and adds robust PCA methodology.
--   'rrcov' is extended by `r pkg("rrcovNA")`, providing
-    robust multivariate methods for *for incomplete* or missing ( `NA`)
+-   `r pkg("rrcov")` is extended by `r pkg("rrcovNA")`, providing
+    robust multivariate methods for *for incomplete* or missing (`NA`)
     data, and by `r pkg("rrcovHD")`, providing robust
     multivariate methods for *High Dimensional* data.
 -   Specialized robust PCA packages are `r pkg("pcaPP")`
@@ -124,9 +124,9 @@ typically will first mention functionality in packages
     `princomp()`, e.g.,
     `X <- stackloss; pc.rob <- princomp(X, covmat= MASS::cov.rob(X))`
 -   Here, `r pkg("robustbase")` contains a slightly more
-    flexible version, `covMcd()` than `r pkg("robust")` 's
-    `fastmcd()`, and similarly for `covOGK()`. OTOH,
-    `r pkg("robust")` 's `covRob()` has automatically
+    flexible version, `covMcd()` than `r pkg("robust")`'s
+    `fastmcd()`, and similarly for `covOGK()`. On the other hand,
+    `r pkg("robust")`'s `covRob()` has automatically
     chosen methods, notably `pairwiseQC()` for large dimensionality p.
     Package `r pkg("robustX")` for experimental, or other
     not yet established procedures, contains `BACON()` and `covNCC()`,
@@ -140,8 +140,8 @@ typically will first mention functionality in packages
     outlier identification in high dimensions.
 -   `r pkg("GSE")` estimates multivariate location and
     scatter in the presence of missing data.
--   `r pkg("RSKC")` provides **R** obust **S** parse **K**
-    -means **C** lustering.
+-   `r pkg("RSKC")` provides **R**obust **S**parse **K**-means
+    **C**lustering.
 -   `r pkg("robustDA")` for *robust mixture Discriminant
     Analysis* (RMDA) builds a mixture model classifier with noisy class
     labels.
@@ -155,7 +155,7 @@ typically will first mention functionality in packages
 -   We are *not* considering cluster-resistant variance (/standard
     error) estimation (aka "sandwich"). Rather e.g. model based and
     hierarchical clustering methodology with a particular emphasis on
-    robustness: Note that `r pkg("cluster")` 's `pam()`
+    robustness: Note that `r pkg("cluster")`'s `pam()`
     implementing "partioning around medians" is partly robust (medians
     instead of very unrobust k-means) but is *not* good enough, as e.g.,
     the k clusters could consist of k-1 outliers one cluster for the
@@ -164,7 +164,7 @@ typically will first mention functionality in packages
     `r pkg("genie")`, `r pkg("Gmedian")`,
     `r pkg("otrimle")` (trimmed MLE model-based) and notably
     `r pkg("tclust")` (robust trimmed clustering).
--   See also the `r view("Cluster")` CRAN task view`
+-   See also the `r view("Cluster")` CRAN task view.
 
 ### Large Data Sets:
 
@@ -191,9 +191,9 @@ typically will first mention functionality in packages
 -   Peter Ruckdeschel has started to lead an effort for a robust
     time-series package, see `r rforge("robust-ts")` on
     R-Forge.
--   Further, robKalman, *"Routines for Robust Kalman Filtering \-\--
+-   Further, robKalman, *"Routines for Robust Kalman Filtering --
     the ACM- and rLS-filter"* , is being developed, see
-    `r rforge("robkalman")` on R-Forge.\
+    `r rforge("robkalman")` on R-Forge.
 
 ### Econometric Models:
 
@@ -210,7 +210,7 @@ typically will first mention functionality in packages
 ### Robust Methods for Bioinformatics:
 
 -   There are several packages in the [Bioconductor
-    project](http://www.bioconductor.org/) providing specialized robust
+    project](https://www.bioconductor.org/) providing specialized robust
     methods. In addition, `r pkg("RobLoxBioC")` provides
     infinitesimally robust estimators for preprocessing omics data.
 
@@ -229,17 +229,17 @@ typically will first mention functionality in packages
 -   Package `r pkg("georob")` aims at robust geostatistical
     analysis of spatial data, such as kriging and more.
 
-Collections of **Several** Methodologies:
+### Collections of **Several** Methodologies:
 
 -   `r pkg("WRS2")` contains robust tests for ANOVA and
     ANCOVA and other functionality from Rand Wilcox's collection.
--   `r pkg("walrus")` builds on `r pkg("WRS2")`
-    's computations, providing a different user interface.
+-   `r pkg("walrus")` builds on `r pkg("WRS2")`'s computations,
+    providing a different user interface.
 -   `r pkg("robeth")` contains R functions interfacing to
     the extensive RobETH fortran library with many functions for
     regression, multivariate estimation and more.
 
-### Other Approaches to robust and resistant methodology:
+### Other Approaches to Robust and Resistant Methodology:
 
 -   The package `r pkg("distr")` and its several child
     packages also allow to explore robust estimation concepts, see e.g.,
