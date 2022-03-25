@@ -164,8 +164,7 @@ typically will first mention functionality in packages
     `r pkg("genie")`, `r pkg("Gmedian")`,
     `r pkg("otrimle")` (trimmed MLE model-based) and notably
     `r pkg("tclust")` (robust trimmed clustering).
--   See also the CRAN task views `r view("Multivariate")`
-    and `r view("Cluster")`
+-   See also the `r view("Cluster") CRAN task view`
 
 ### Large Data Sets:
 
