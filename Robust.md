@@ -62,7 +62,7 @@ typically will first mention functionality in packages
 
 ### Regression
 
--   ***Linear** Regression:*  
+-   ***Linear** Regression:*
     `lmrob()` (`r pkg("robustbase")`) and `lmRob()`
     (`r pkg("robust")`) where the former uses the latest of
     the fast-S algorithms and heteroscedasticity and autocorrelation
@@ -82,7 +82,13 @@ typically will first mention functionality in packages
     so also for nonparametric regression via splines. Package
     `r pkg("mblm")`'s function `mblm()` fits median-based
     (Theil-Sen or Siegel's repeated) simple linear models.
--   ***Generalized** Linear Models ( **GLM** s) for Regression:*  
+
+	Note that a location (and scale) model is a regression with only an
+	intercept and may be approached by e.g., `lmrob(y ~ 1)`.  For very
+	small samples, 	location `robLoc()` and scale `robScale()` are also
+	provided by `r pkg("revss")`.
+
+-   ***Generalized** Linear Models ( **GLM** s) for Regression:*
     GLMs are provided both via `glmrob()`
     (`r pkg("robustbase")`) and `glmRob()`
     (`r pkg("robust")`). Robust ordinal regression is
@@ -92,7 +98,7 @@ typically will first mention functionality in packages
     robust linear regression with compositional data as covariates.
     `r pkg("multinomRob")` fits overdispersed multinomial
     regression models for count data.
--   ***Mixed-Effects** (Linear and Nonlinear) Regression:*  
+-   ***Mixed-Effects** (Linear and Nonlinear) Regression:*
     Quantile regression (and hence L1 or LAD) for mixed effect models,
     is available in package `r pkg("lqmm")`. Rank-based
     mixed effect fitting from package `r pkg("rlme")`,
@@ -101,7 +107,7 @@ typically will first mention functionality in packages
     More recently, `r pkg("skewlmm")` provides robust linear
     mixed-effects models **LMM** via scale mixtures of skew-normal
     distributions.
--   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*  
+-   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*
     Robust Nonlinear model fitting is available through
     `r pkg("robustbase")`'s `nlrob()`.
     `r pkg("robustgam")` fits robust GAMs, i.e., robust
