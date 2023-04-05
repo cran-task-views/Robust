@@ -108,8 +108,6 @@ typically will first mention functionality in packages
 -   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*
     Robust Nonlinear model fitting is available through
     `r pkg("robustbase")`'s `nlrob()`.
-    `r pkg("robustgam")` fits robust GAMs, i.e., robust
-    Generalized Additive Models.
 
 ### Multivariate Analysis:
 
