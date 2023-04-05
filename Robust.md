@@ -3,7 +3,7 @@ name: Robust
 topic: Robust Statistical Methods
 maintainer: Martin Maechler
 email: Martin.Maechler@R-project.org
-version: 2022-03-24
+version: 2023-04-05
 source: https://github.com/cran-task-views/Robust/
 ---
 
@@ -96,8 +96,6 @@ typically will first mention functionality in packages
     `r pkg("drgee")` fits "Doubly Robust" Generalized
     Estimating Equations (GEEs), `r pkg("complmrob")` does
     robust linear regression with compositional data as covariates.
-    `r pkg("multinomRob")` fits overdispersed multinomial
-    regression models for count data.
 -   ***Mixed-Effects** (Linear and Nonlinear) Regression:*
     Quantile regression (and hence L1 or LAD) for mixed effect models,
     is available in package `r pkg("lqmm")`. Rank-based
