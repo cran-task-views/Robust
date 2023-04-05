@@ -220,11 +220,6 @@ typically will first mention functionality in packages
 -   Package `r pkg("robsurvey")` provides robust survey regression estimation
     and the robust Horvitz-Thompson estimator.
 
-### Geostatistics:
-
--   Package `r pkg("georob")` aims at robust geostatistical
-    analysis of spatial data, such as kriging and more.
-
 ### Collections of **Several** Methodologies:
 
 -   `r pkg("WRS2")` contains robust tests for ANOVA and
