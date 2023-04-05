@@ -135,8 +135,6 @@ typically will first mention functionality in packages
     the latter providing the neighbor variance estimation (NNVE) method
     of Wang and Raftery (2002), also available (slightly less optimized)
     in `r pkg("covRobust")`.
--   `r pkg("RobRSVD")` provides a robust Regularized
-    Singular Value Decomposition.
 -   `r pkg("mvoutlier")` (building on
     `r pkg("robustbase")`) provides several methods for
     outlier identification in high dimensions.
