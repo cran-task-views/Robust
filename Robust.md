@@ -175,9 +175,6 @@ typically will first mention functionality in packages
 -   `BACON()` (in `r pkg("robustX")`) should be applicable
     for larger (n,p) than traditional robust covariance based outlier
     detectors.
--   `r pkg("OutlierDM")` detects outliers for replicated
-    high-throughput data. (See also the CRAN task view
-    `r view("MachineLearning")`.)
 
 ### Descriptive Statistics / Exploratory Data Analysis:
 
