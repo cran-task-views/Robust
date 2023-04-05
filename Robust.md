@@ -91,8 +91,7 @@ typically will first mention functionality in packages
 -   ***Generalized** Linear Models ( **GLM** s) for Regression:*
     GLMs are provided both via `glmrob()`
     (`r pkg("robustbase")`) and `glmRob()`
-    (`r pkg("robust")`). Robust ordinal regression is
-    provided by `r pkg("rorutadis")` (UTADIS).
+    (`r pkg("robust")`).
     `r pkg("drgee")` fits "Doubly Robust" Generalized
     Estimating Equations (GEEs), `r pkg("complmrob")` does
     robust linear regression with compositional data as covariates.
