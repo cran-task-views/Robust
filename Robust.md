@@ -3,7 +3,7 @@ name: Robust
 topic: Robust Statistical Methods
 maintainer: Martin Maechler
 email: Martin.Maechler@R-project.org
-version: 2023-04-05
+version: 2023-07-01
 source: https://github.com/cran-task-views/Robust/
 ---
 
@@ -37,9 +37,9 @@ through a set of R packages complementing each other. These should build
 on a basic package with "Essentials", coined
 `r pkg("robustbase", priority = "core")` with (potentially
 many) other packages building on top and extending the essential
-functionality to particular models or applications. Since 2020 and the
-2nd edition of [*Robust Statistics: Theory and
-Methods*](https://www.wiley.com/go/maronna/robust) ,
+functionality to particular models or applications. 
+Since 2020 and the 2nd edition of 
+[*Robust Statistics: Theory and Methods*](https://www.wiley.com/go/maronna/robust) ,
 `r pkg("RobStatTM")` covers its estimators and examples,
 notably by importing from `r pkg("robustbase")` and
 `r pkg("rrcov", priority = "core")`. Further, there is the
@@ -104,6 +104,12 @@ typically will first mention functionality in packages
     More recently, `r pkg("skewlmm")` provides robust linear
     mixed-effects models **LMM** via scale mixtures of skew-normal
     distributions.
+
+-   ***Generalized Regression - GAM-like***
+	Package `r pkg("GJRM")`'s `gamlss()` function with option 
+	`gamlss(*, robust = TRUE)`  allows fitting many model families robustly 
+	(wrapped inside the LSS "location-scale-shape" transformation scope).
+
 -   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*
     Robust Nonlinear model fitting is available through
     `r pkg("robustbase")`'s `nlrob()`.
