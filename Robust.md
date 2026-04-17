@@ -104,7 +104,8 @@ typically will first mention functionality in packages
     `gamlss(*, robust = TRUE)`  allows fitting many model families robustly 
     (wrapped inside the LSS "location-scale-shape" transformation scope).
 
--   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*  
+-   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*
+
     Robust Nonlinear model fitting is available through
     `r pkg("robustbase")`'s `nlrob()`.
 
