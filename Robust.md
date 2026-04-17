@@ -62,7 +62,8 @@ typically will first mention functionality in packages
 
 ### Regression
 
--   ***Linear** Regression:*  
+-   ***Linear** Regression:*
+
     `lmrob()` (`r pkg("robustbase")`) and `lmRob()`
     (`r pkg("robust")`) where the former uses the latest of
     the fast-S algorithms and heteroscedasticity and autocorrelation
@@ -88,7 +89,8 @@ typically will first mention functionality in packages
 	small samples, 	location `robLoc()` and scale `robScale()` are also
 	provided by `r pkg("revss")`.
 
--   ***Generalized** Linear Models ( **GLM** s) for Regression:*  
+-   ***Generalized** Linear Models ( **GLM** s) for Regression:*
+
     GLMs are provided both via `glmrob()`
     (`r pkg("robustbase")`) and `glmRob()`
     (`r pkg("robust")`).
@@ -96,16 +98,18 @@ typically will first mention functionality in packages
     Estimating Equations (GEEs), `r pkg("complmrob")` does
     robust linear regression with compositional data as covariates.
 	
--   ***Generalized Smooth/Additive** (GAM-like) Regression*:  
-	Package `r pkg("GJRM")`'s `gamlss()` function with option 
-	`gamlss(*, robust = TRUE)`  allows fitting many model families robustly 
-	(wrapped inside the LSS "location-scale-shape" transformation scope).
+-   ***Generalized Smooth/Additive** (GAM-like) Regression:*
+
+    Package `r pkg("GJRM")`'s `gamlss()` function with option 
+    `gamlss(*, robust = TRUE)`  allows fitting many model families robustly 
+    (wrapped inside the LSS "location-scale-shape" transformation scope).
 
 -   ***Nonlinear / Smooth** (Nonparametric Function) Regression:*  
     Robust Nonlinear model fitting is available through
     `r pkg("robustbase")`'s `nlrob()`.
 
--   ***Mixed-Effects** (Linear and Nonlinear) Regression:*  
+-   ***Mixed-Effects** (Linear and Nonlinear) Regression:*
+
     Quantile regression (and hence L1 or LAD) for mixed effect models,
     is available in package `r pkg("lqmm")`. Rank-based
     mixed effect fitting from package `r pkg("rlme")`,
