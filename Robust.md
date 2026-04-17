@@ -85,9 +85,13 @@ typically will first mention functionality in packages
     (Theil-Sen or Siegel's repeated) simple linear models.
 
 	Note that a location (and scale) model is a regression with only an
-	intercept and may be approached by e.g., `lmrob(y ~ 1)`.  For very
-	small samples, 	location `robLoc()` and scale `robScale()` are also
-	provided by `r pkg("revss")`.
+	intercept and may be approached by e.g., `lmrob(y ~ 1)`.
+
+     For very small samples, location `robLoc()` and scale `robScale()` are
+     also provided by `r pkg("revss")`. `r pkg("revss")` also provides a fast
+     bias-corrected version of `mad()` for small samples called `madn()`, a
+     fast implementation of the classic mean absolute deviation from center called
+     `adm()`, and a bias-correction version called `admn()`.
 
 -   ***Generalized** Linear Models ( **GLM** s) for Regression:*
 
